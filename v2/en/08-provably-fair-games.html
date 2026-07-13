@@ -1,0 +1,181 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"></head><body>
+<table style="border-collapse:collapse;font-size:9pt;background:#f5f5f5;
+border:1px solid #ccc;margin-bottom:18px;">
+<tbody><tr><td style='font-weight:bold;padding:2px 8px;vertical-align:top;color:#555;'>meta_title</td><td style='padding:2px 8px;'>Provably Fair Games: How On-Chain Fairness Works Today</td></tr><tr><td style='font-weight:bold;padding:2px 8px;vertical-align:top;color:#555;'>meta_description</td><td style='padding:2px 8px;'>Provably fair games let you verify every result yourself instead of trusting a casino. See what it means, how to check a round, and why it beats certified RNG.</td></tr><tr><td style='font-weight:bold;padding:2px 8px;vertical-align:top;color:#555;'>slug</td><td style='padding:2px 8px;'>provably-fair-games</td></tr><tr><td style='font-weight:bold;padding:2px 8px;vertical-align:top;color:#555;'>primary_keyword</td><td style='padding:2px 8px;'>provably fair games</td></tr><tr><td style='font-weight:bold;padding:2px 8px;vertical-align:top;color:#555;'>secondary_keywords</td><td style='padding:2px 8px;'>[&quot;what does provably fair mean&quot;, &quot;how to verify a provably fair game&quot;, &quot;provably fair vs RNG&quot;, &quot;can a provably fair game be rigged&quot;]</td></tr><tr><td style='font-weight:bold;padding:2px 8px;vertical-align:top;color:#555;'>locale</td><td style='padding:2px 8px;'>en</td></tr><tr><td style='font-weight:bold;padding:2px 8px;vertical-align:top;color:#555;'>canonical</td><td style='padding:2px 8px;'>https://astro.fun/en/blog/provably-fair-games</td></tr><tr><td style='font-weight:bold;padding:2px 8px;vertical-align:top;color:#555;'>author</td><td style='padding:2px 8px;'>The Astro Team</td></tr><tr><td style='font-weight:bold;padding:2px 8px;vertical-align:top;color:#555;'>status</td><td style='padding:2px 8px;'>draft_machine_translation</td></tr></tbody></table>
+<h1>Provably Fair Games: How On-Chain Fairness Actually Works</h1>
+<p>Most online casinos answer the fairness question the same way. They show you a logo, drop the word "certified," and ask you to trust them. You cannot see the math. You cannot check a single result. You just have to believe the operator was not pulling levers behind the curtain.</p>
+<p>Provably fair games flip that around. Instead of asking for your trust, they hand you the proof. After every round, you can verify for yourself that the outcome was decided before you bet and never touched afterward. No insider access, no special tools, no faith required. Just math you can run.</p>
+<p>This guide explains what provably fair actually means, how it works in plain language, why it beats "certified RNG," and how you can check a result yourself. We use crash as the worked example because it is the cleanest one to follow. If you want to watch a round while you read, you can <a href="https://astro.fun/en/play">play the crash game</a> and follow along.</p>
+<h2>What does provably fair mean?</h2>
+<p>A provably fair game is one where any player can confirm, after the fact, that the result was locked in before they placed a bet and was never altered. "Provably" is the key word. It is not a promise or a badge. It is a property you can test.</p>
+<p>The mechanism rests on cryptography. Before a round, the platform commits to the outcome by publishing a sealed value. After the round, it reveals the secret behind that value. You re-run the math and check that the two match. If they do, the result is genuine. If they do not, the game cheated and the proof is public.</p>
+<p>This is not specific to one title. The same idea powers provably fair dice, crash, plinko, roulette, and card games. The format changes, the principle does not: the result exists before you act, and you get to verify it after.</p>
+<h2>Provably fair vs "certified RNG": the real difference</h2>
+<p>Traditional online casinos rely on a certified random number generator. An RNG is a closed system that produces outcomes, and an independent lab audits it now and then to confirm it behaves randomly. That audit is real work, but it leaves you in a particular position. You never see the RNG. You trust the certificate, the lab, and the operator running the software in between audits.</p>
+<p>Provably fair takes a different route. Every single round comes with a receipt you can check yourself. You do not trust a once-a-year audit. You verify each result the moment it ends.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Certified RNG</th>
+<th>Provably fair</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Who checks fairness</td>
+<td>A third-party lab, periodically</td>
+<td>You, every round</td>
+</tr>
+<tr>
+<td>What you see</td>
+<td>A certificate or logo</td>
+<td>The actual seed and result</td>
+</tr>
+<tr>
+<td>What you rely on</td>
+<td>Trust in the operator</td>
+<td>Public math</td>
+</tr>
+<tr>
+<td>Can the operator change a result</td>
+<td>Hard to detect from outside</td>
+<td>Mathematically impossible to hide</td>
+</tr>
+</tbody>
+</table>
+<p>Both aim at the same goal. The difference is who holds the proof. With certified RNG the proof lives with the operator. With a provably fair game the proof lives with you. That is the whole pitch behind "no trust required, just math."</p>
+<h2>How provably fair works, in plain language</h2>
+<p>Think of it like a sealed envelope. Before the round starts, the platform writes down the result, seals it in an envelope, and shows you the sealed envelope. It cannot change what is inside without breaking the seal. After the round, it opens the envelope so you can confirm the result inside matches what actually happened.</p>
+<p>In cryptographic terms, that envelope is a hash. A hash is a one-way fingerprint of some secret data. You cannot work backward from the fingerprint to the secret, but once the secret is revealed, anyone can hash it again and confirm it produces the same fingerprint. That one-way property is what makes the seal trustworthy.</p>
+<p>On Astro, the commitment goes one step further than a single sealed value. The platform pre-generates a long chain of secret seeds, where each seed is the cryptographic hash of the next one, and publishes the final hash of that chain on the blockchain before any bets are placed. That on-chain anchor is immutable. It commits the platform to every future result in advance, in public, where no one can quietly swap it later. The server knows each round's outcome ahead of time but keeps the seed secret while the multiplier climbs. After the round, the seed is revealed and the math is yours to check.</p>
+<p>We keep the cryptography light here on purpose. If you want the full walkthrough, including the keccak256 hashing and how the chain is built, read <a href="https://astro.fun/en/blog/provably-fair">how the hash chain works</a> and verify a round step by step.</p>
+<p><a href="https://astro.fun/en/blog/provably-fair">Verify it yourself</a></p>
+<h2>Which games can be provably fair?</h2>
+<p>Almost any game with a clear, computable outcome can be made provably fair. The simpler the result, the easier it is to verify.</p>
+<ul>
+<li><strong>Dice.</strong> The classic provably fair game. One number, one comparison, instant to check.</li>
+<li><strong>Crash.</strong> A rising multiplier that busts at a predetermined point. Clean to verify and easy to follow.</li>
+<li><strong>Plinko and wheels.</strong> A path or a slot decided by the revealed seed.</li>
+<li><strong>Roulette.</strong> A single winning number derived from the seed.</li>
+<li><strong>Card games.</strong> A shuffled deck whose order is fixed by the seed before the deal.</li>
+</ul>
+<p>Slots can be provably fair too, though their many moving symbols make the verification heavier. Across all of these, the trust model is identical. You are never asked to believe the spin was honest. You are handed the data to prove it. Crash is the cleanest example to learn on, so let us walk through one.</p>
+<h2>Crash, as a worked example</h2>
+<p>A crash round is one decision under pressure. A multiplier starts at 1.00x, rises, and at some random point it crashes. Cash out before that and you keep your bet multiplied. Wait too long and you lose it. Here is how provably fair wraps around that loop.</p>
+<p>Before the round, the crash point already exists. It is determined by a seed sitting inside a hash chain whose final hash was anchored on the blockchain before anyone bet. While the multiplier climbs, the server holds that seed secret, so no player and no operator can act on knowledge of where it busts. When the round ends, the seed is revealed. Anyone can hash it, confirm it fits the chain, and run the formula that turns it into the crash point.</p>
+<p>This is also where the house edge lives, in the open. On Astro the edge is currently set at <strong>3.03%</strong>. It comes from a rule in the crash formula: when a value lands on a multiple of 33 (written <code>h % 33 === 0</code>), the round instantly crashes at 1.00x. That happens with a probability of 1 in 33, which is 3.03%. For every 1 USDC wagered, the expected long-run return is about 0.97 USDC, so the return to player is roughly 96.97%. That edge is configurable on-chain by the operator, but it is never hidden: whatever it is set to, it is public and checkable, which is the opposite of a number you are simply told. For the round mechanics and cash-out timing, see <a href="https://astro.fun/en/blog/how-to-play">how a round works</a>.</p>
+<p><a href="https://astro.fun/en/play">Play Now</a></p>
+<blockquote>
+<p>18+. Play responsibly. Availability depends on your local laws. Gambling involves risk and can be addictive. If playing stops being fun, seek help.</p>
+</blockquote>
+<h2>How to verify a provably fair game yourself</h2>
+<p>You do not need to be a developer to check a round. The flow is the same on any honest provably fair game.</p>
+<ol>
+<li><strong>Find the revealed seed.</strong> After a round ends, the platform publishes the seed that produced the result. On Astro you can browse <a href="https://astro.fun/en/rounds">past rounds</a> and pull the seed for any of them.</li>
+<li><strong>Find the committed value.</strong> Locate the hash the platform committed to in advance. On Astro that traces back to the on-chain anchor for the seed chain.</li>
+<li><strong>Hash the seed.</strong> Run the revealed seed through the same hash function the game uses and confirm it produces the value that was committed before the round.</li>
+<li><strong>Derive the result.</strong> Apply the published formula to the seed to reproduce the crash point, dice roll, or card order.</li>
+<li><strong>Compare.</strong> If your output matches what actually happened, the round was fair. If anything is off, you have public proof it was not.</li>
+</ol>
+<p>Astro provides a calculator that does the heavy lifting, so you can paste a seed and see the crash point it produces. The exact steps and the formula are in the <a href="https://astro.fun/en/blog/provably-fair">provably fair</a> guide, and you can cross-check the numbers against the <a href="https://astro.fun/en/statistics">game statistics</a>.</p>
+<h2>Can a provably fair game be rigged or predicted?</h2>
+<p>These are two different questions, and the honest answers point in opposite directions.</p>
+<p>Can it be rigged? No. To fake a result, the operator would have to change a seed after committing to it. On a hash chain that is impossible to hide, because altering one seed breaks every hash that follows it, and the final hash was already published on-chain where everyone can see it. The math would fall apart in public the moment anyone checked.</p>
+<p>Can it be predicted? Also no, and that is the point of the design. You will see "crash predictor" apps, bots, and paid signal groups claiming to call the next bust. They cannot work. The seed that decides the outcome stays secret until after the round ends, and predicting it would mean reversing a cryptographic hash before it is revealed, which is not something an app does. What those tools actually do is take your money or your account. Provably fair guarantees fairness and verifiability. It does not guarantee a win, and no honest game ever will.</p>
+<h2>Frequently asked questions</h2>
+<h3>What does provably fair mean?</h3>
+<p>Provably fair means any player can verify, after a round, that the result was decided before they bet and never changed. The platform commits to the outcome with a cryptographic hash beforehand and reveals the secret afterward, so you can re-run the math and confirm it yourself instead of trusting the operator.</p>
+<h3>How do I verify a provably fair game?</h3>
+<p>You find the seed the platform reveals after the round, hash it, and confirm it matches the value the platform committed to in advance. Then you apply the published formula to reproduce the result. On Astro you can do this from the past rounds page, and a built-in calculator handles the hashing.</p>
+<h3>Is provably fair the same as RNG certified?</h3>
+<p>No. A certified RNG is audited by a third-party lab on a schedule, and you trust that certificate. A provably fair game gives you a verifiable receipt for every single round, so you check each result yourself rather than relying on a periodic audit.</p>
+<h3>Can a provably fair game be rigged?</h3>
+<p>Not without it showing. Changing a result would mean altering a seed after the platform already committed to it, and on a hash chain that breaks every following hash. When the commitment is anchored on-chain before any bets, manipulation becomes mathematically impossible to hide.</p>
+<h3>Which games can be provably fair?</h3>
+<p>Any game with a clear, computable outcome: dice, crash, plinko, roulette, and card games are common examples. Simpler outcomes are easier to verify. Slots can be provably fair too, though their many symbols make the check more involved.</p>
+<h3>Does provably fair mean I can win more or predict the outcome?</h3>
+<p>No. Provably fair guarantees the result is honest and verifiable, not that you will win. The outcome stays secret until after the round, so it cannot be predicted, and every game keeps a house edge. On Astro that edge is currently set at 3.03%, for an RTP of about 96.97%.</p>
+<h3>Is provably fair only for crypto casinos?</h3>
+<p>It is most common in crypto and on-chain games, because blockchains make commitments public and permanent. The cryptography itself does not require crypto, but on-chain anchoring is what lets fairness be verified by anyone rather than promised by the operator.</p>
+<h3>What is the house edge on a provably fair game?</h3>
+<p>It depends on the game, and a provably fair game shows you that number instead of hiding it. On Astro the edge is currently set at 3.03%, which comes from an instant crash that occurs with a probability of 1 in 33, for a return to player of roughly 96.97%.</p>
+<h2>Trust the math, not the logo</h2>
+<p>Provably fair games solve the oldest problem in online gambling: knowing the game is straight. Certified RNG asks you to trust a badge. A provably fair game hands you the proof and lets you check every round yourself. The result is locked before you bet, anchored in public, and revealed after, so fairness is something you can demonstrate rather than something you are told.</p>
+<p>That said, verifiable is not the same as safe. Every game carries a real house edge, currently 3.03% on Astro, and no system or strategy beats it over the long run. Set a budget, treat play as entertainment, and never bet more than you can afford to lose. You must be 18 or older, or the legal age in your jurisdiction, whichever is higher. When you are ready, <a href="https://astro.fun/en/play">play the crash game</a> and verify your first round yourself.</p>
+<p><a href="https://astro.fun/en/play">Play Now</a></p>
+<p><strong>Disclaimers.</strong> 18+. Play responsibly. astro.fun is a crypto-native game using USDC. Crypto assets are volatile; only play with funds you can afford to lose. This content is informational and does not constitute financial, investment, or legal advice. Availability depends on your local laws. It is your responsibility to know the laws where you live. Gambling involves risk and can be addictive. If playing stops being fun, seek help.</p>
+<!-- JSON-LD FAQPage -->
+
+<pre><code class="language-json">{
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@type&quot;: &quot;FAQPage&quot;,
+  &quot;mainEntity&quot;: [
+    {
+      &quot;@type&quot;: &quot;Question&quot;,
+      &quot;name&quot;: &quot;What does provably fair mean?&quot;,
+      &quot;acceptedAnswer&quot;: {
+        &quot;@type&quot;: &quot;Answer&quot;,
+        &quot;text&quot;: &quot;Provably fair means any player can verify, after a round, that the result was decided before they bet and never changed. The platform commits to the outcome with a cryptographic hash beforehand and reveals the secret afterward, so you can re-run the math and confirm it yourself instead of trusting the operator.&quot;
+      }
+    },
+    {
+      &quot;@type&quot;: &quot;Question&quot;,
+      &quot;name&quot;: &quot;How do I verify a provably fair game?&quot;,
+      &quot;acceptedAnswer&quot;: {
+        &quot;@type&quot;: &quot;Answer&quot;,
+        &quot;text&quot;: &quot;You find the seed the platform reveals after the round, hash it, and confirm it matches the value the platform committed to in advance. Then you apply the published formula to reproduce the result. On Astro you can do this from the past rounds page, and a built-in calculator handles the hashing.&quot;
+      }
+    },
+    {
+      &quot;@type&quot;: &quot;Question&quot;,
+      &quot;name&quot;: &quot;Is provably fair the same as RNG certified?&quot;,
+      &quot;acceptedAnswer&quot;: {
+        &quot;@type&quot;: &quot;Answer&quot;,
+        &quot;text&quot;: &quot;No. A certified RNG is audited by a third-party lab on a schedule, and you trust that certificate. A provably fair game gives you a verifiable receipt for every single round, so you check each result yourself rather than relying on a periodic audit.&quot;
+      }
+    },
+    {
+      &quot;@type&quot;: &quot;Question&quot;,
+      &quot;name&quot;: &quot;Can a provably fair game be rigged?&quot;,
+      &quot;acceptedAnswer&quot;: {
+        &quot;@type&quot;: &quot;Answer&quot;,
+        &quot;text&quot;: &quot;Not without it showing. Changing a result would mean altering a seed after the platform already committed to it, and on a hash chain that breaks every following hash. When the commitment is anchored on-chain before any bets, manipulation becomes mathematically impossible to hide.&quot;
+      }
+    },
+    {
+      &quot;@type&quot;: &quot;Question&quot;,
+      &quot;name&quot;: &quot;Which games can be provably fair?&quot;,
+      &quot;acceptedAnswer&quot;: {
+        &quot;@type&quot;: &quot;Answer&quot;,
+        &quot;text&quot;: &quot;Any game with a clear, computable outcome: dice, crash, plinko, roulette, and card games are common examples. Simpler outcomes are easier to verify. Slots can be provably fair too, though their many symbols make the check more involved.&quot;
+      }
+    },
+    {
+      &quot;@type&quot;: &quot;Question&quot;,
+      &quot;name&quot;: &quot;Does provably fair mean I can win more or predict the outcome?&quot;,
+      &quot;acceptedAnswer&quot;: {
+        &quot;@type&quot;: &quot;Answer&quot;,
+        &quot;text&quot;: &quot;No. Provably fair guarantees the result is honest and verifiable, not that you will win. The outcome stays secret until after the round, so it cannot be predicted, and every game keeps a house edge. On Astro that edge is currently set at 3.03%, for an RTP of about 96.97%.&quot;
+      }
+    },
+    {
+      &quot;@type&quot;: &quot;Question&quot;,
+      &quot;name&quot;: &quot;Is provably fair only for crypto casinos?&quot;,
+      &quot;acceptedAnswer&quot;: {
+        &quot;@type&quot;: &quot;Answer&quot;,
+        &quot;text&quot;: &quot;It is most common in crypto and on-chain games, because blockchains make commitments public and permanent. The cryptography itself does not require crypto, but on-chain anchoring is what lets fairness be verified by anyone rather than promised by the operator.&quot;
+      }
+    },
+    {
+      &quot;@type&quot;: &quot;Question&quot;,
+      &quot;name&quot;: &quot;What is the house edge on a provably fair game?&quot;,
+      &quot;acceptedAnswer&quot;: {
+        &quot;@type&quot;: &quot;Answer&quot;,
+        &quot;text&quot;: &quot;It depends on the game, and a provably fair game shows you that number instead of hiding it. On Astro the edge is currently set at 3.03%, which comes from an instant crash that occurs with a probability of 1 in 33, for a return to player of roughly 96.97%.&quot;
+      }
+    }
+  ]
+}
+</code></pre>
+</body></html>
