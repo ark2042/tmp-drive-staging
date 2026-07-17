@@ -13,7 +13,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <h2>Comment se déroule une manche de crash game casino, étape par étape</h2>
 <p>Chaque manche suit le même rythme. Sur Astro, ça se passe ainsi :</p>
 <ol>
-<li><strong>Placez votre mise.</strong> Connectez votre wallet et définissez votre montant en USDC. Ce qui limite réellement chaque mise, c'est un plafond Kelly dynamique (chaque mise peut gagner jusqu'à 2 % de la bankroll en profit avant un retrait automatique forcé), et non un plafond fixe.</li>
+<li><strong>Placez votre mise.</strong> Connectez votre wallet et définissez votre montant en USDG. Ce qui limite réellement chaque mise, c'est un plafond Kelly dynamique (chaque mise peut gagner jusqu'à 2 % de la bankroll en profit avant un retrait automatique forcé), et non un plafond fixe.</li>
 <li><strong>Compte à rebours.</strong> La première mise d'une manche déclenche un compte à rebours de 10 secondes. D'autres joueurs rejoignent pendant cette fenêtre.</li>
 <li><strong>Fermeture des paris.</strong> Quand le compte à rebours se termine, plus aucune mise n'est acceptée pour cette manche.</li>
 <li><strong>Le multiplicateur monte.</strong> Il grimpe depuis 1,00x et continue. Il n'y a pas de plafond fixe sur le multiplicateur lui-même, même si chaque mise dispose d'un plafond effectif défini par le retrait forcé Kelly.</li>
@@ -24,7 +24,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <p><a href="https://astro.fun/fr/play">Découvrir Astro</a></p>
 <h2>Plateformes fiat vs plateformes crypto on-chain</h2>
 <p>La plupart des jeux de crash vivent dans des casinos fiat. Vous déposez de l'argent par carte ou virement, l'opérateur détient votre solde, et l'opérateur règle chaque manche. Vous faites confiance à une société pour gérer le jeu honnêtement et vous payer quand vous gagnez.</p>
-<p>Les plateformes crypto on-chain changent deux choses importantes. La première, c'est la garde des fonds. Vous jouez depuis votre propre wallet en USDC, et les gains se règlent on-chain à la fin de chaque manche via un smart contract, et non depuis le grand livre interne d'un opérateur. La deuxième, c'est la visibilité. Sur Astro, la bankroll qui garantit chaque mise est ouverte. N'importe qui peut y déposer (des frais d'entrée de 2 % s'appliquent au dépôt), percevoir une part des manches jouées côté maison, et retirer à tout moment, l'intégralité du pool étant vérifiable publiquement. Comme toute position de tenue de marché, cela comporte des risques autant qu'un potentiel de gain : la bankroll gagne quand les joueurs perdent et perd quand les joueurs gagnent. Si vous souhaitez vous asseoir de l'autre côté de la table, vous pouvez <a href="https://astro.fun/fr/vault">rejoindre la bankroll</a>.</p>
+<p>Les plateformes crypto on-chain changent deux choses importantes. La première, c'est la garde des fonds. Vous jouez depuis votre propre wallet en USDG, et les gains se règlent on-chain à la fin de chaque manche via un smart contract, et non depuis le grand livre interne d'un opérateur. La deuxième, c'est la visibilité. Sur Astro, la bankroll qui garantit chaque mise est ouverte. N'importe qui peut y déposer (des frais d'entrée de 2 % s'appliquent au dépôt), percevoir une part des manches jouées côté maison, et retirer à tout moment, l'intégralité du pool étant vérifiable publiquement. Comme toute position de tenue de marché, cela comporte des risques autant qu'un potentiel de gain : la bankroll gagne quand les joueurs perdent et perd quand les joueurs gagnent. Si vous souhaitez vous asseoir de l'autre côté de la table, vous pouvez <a href="https://astro.fun/fr/vault">rejoindre la bankroll</a>.</p>
 <p>Ces deux différences posent les bases de celle qui décide de tout : la façon dont vous savez que le jeu est équitable.</p>
 <h2>Comment l'équité diffère : RNG certifié contre provably fair</h2>
 <p>C'est là qu'un crash game casino mérite ou demande votre confiance.</p>
@@ -34,7 +34,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <p><a href="https://astro.fun/fr/blog/provably-fair">Vérifier par vous-même</a></p>
 <h2>House edge et RTP, dits honnêtement</h2>
 <p>Voici le chiffre que la plupart des crash game casinos évitent. Tout jeu de crash conserve un avantage de la maison (house edge), et sur Astro il est de <strong>3,03 %</strong>. Il découle d'une règle dans la formule : quand une valeur spécifique tombe sur un multiple de 33 (<code>h % 33 === 0</code>), la manche crashe instantanément à 1,00x. Cela se produit avec une probabilité de 1 sur 33, soit 3,03 %.</p>
-<p>En termes simples, pour chaque 1 USDC misé, le retour attendu sur la durée est d'environ 0,97 USDC. Le RTP (taux de redistribution) est d'environ 96,97 %. Cet avantage est ce qui permet au jeu de payer les gagnants et de continuer à fonctionner, et c'est aussi pourquoi aucune stratégie ne bat le jeu sur la durée.</p>
+<p>En termes simples, pour chaque 1 USDG misé, le retour attendu sur la durée est d'environ 0,97 USDG. Le RTP (taux de redistribution) est d'environ 96,97 %. Cet avantage est ce qui permet au jeu de payer les gagnants et de continuer à fonctionner, et c'est aussi pourquoi aucune stratégie ne bat le jeu sur la durée.</p>
 <p>La comparaison honnête ressemble à ceci :</p>
 <table>
 <thead>
@@ -64,7 +64,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <ul>
 <li><strong>Pouvez-vous vérifier une manche vous-même ?</strong> Si la réponse est « nous sommes certifiés », vous faites confiance à un certificat. Si la réponse est un seed révélé que vous pouvez hacher, vous vérifiez le résultat. Préférez le second.</li>
 <li><strong>La house edge est-elle affichée ouvertement ?</strong> Une plateforme qui cache son avantage cache le seul chiffre qui détermine vos probabilités sur la durée. Un chiffre transparent, comme 3,03 %, est un signal de transparence.</li>
-<li><strong>Qui détient votre argent ?</strong> Votre propre wallet en USDC, ou le solde interne de l'opérateur. La garde change votre risque si l'opérateur fait défaut.</li>
+<li><strong>Qui détient votre argent ?</strong> Votre propre wallet en USDG, ou le solde interne de l'opérateur. La garde change votre risque si l'opérateur fait défaut.</li>
 <li><strong>La couverture des paiements est-elle visible ?</strong> Une bankroll publique et on-chain signifie que le jeu peut toujours payer. Vous pouvez vous faire une idée de l'activité dans <a href="https://astro.fun/fr/statistics">l'historique des manches</a>.</li>
 <li><strong>Y a-t-il de vrais outils de jeu responsable et une limite d'âge claire ?</strong> Des limites, un âge minimum déclaré et un langage honnête sur les risques sont des basiques, pas des options.</li>
 </ul>
@@ -74,9 +74,9 @@ border:1px solid #ccc;margin-bottom:18px;">
 <h3>Qu'est-ce qu'un crash game casino ?</h3>
 <p>Un crash game casino est une plateforme construite autour du jeu de crash : vous misez, un multiplicateur monte depuis 1,00x, et vous retirez avant qu'il crashe à un point aléatoire. Retirer tôt sécurise un gain plus modeste, tandis qu'attendre plus longtemps risque de faire perdre la mise pour un paiement plus important.</p>
 <h3>En quoi un crash casino game diffère-t-il d'un casino en ligne classique ?</h3>
-<p>Un casino en ligne classique propose de nombreux jeux comme des machines à sous et des jeux de table. Un crash casino game, c'est une seule mécanique — le multiplicateur montant — jouée manche après manche, où votre décision principale est le moment où vous retirez.</p>
+<p>Un casino en ligne classique propose de nombreux jeux comme des machines à sous et des jeux de table. Un crash casino game, c'est une seule mécanique (le multiplicateur montant) jouée manche après manche, où votre décision principale est le moment où vous retirez.</p>
 <h3>Peut-on gagner de l'argent réel dans les jeux de crash ?</h3>
-<p>Oui, les manches gagnantes paient des fonds réels. Mais tout jeu de crash conserve une house edge — 3,03 % sur Astro — donc le jeu n'est pas un moyen de gagner de l'argent sur la durée. Traitez-le comme un divertissement avec un budget fixe, jamais comme un revenu.</p>
+<p>Oui, les manches gagnantes paient des fonds réels. Mais tout jeu de crash conserve une house edge (3,03 % sur Astro), donc le jeu n'est pas un moyen de gagner de l'argent sur la durée. Traitez-le comme un divertissement avec un budget fixe, jamais comme un revenu.</p>
 <h3>Comment le point de crash est-il déterminé ?</h3>
 <p>Sur un jeu provably fair, il est fixé à l'avance par un seed secret et révélé après la manche. Le seed fait partie d'une chaîne de hachage ancrée on-chain avant toute mise, donc le résultat est défini avant que vous jouiez et il est impossible de le modifier après.</p>
 <h3>Un crash game casino est-il truqué ou équitable ?</h3>
@@ -92,7 +92,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <p>Définissez un budget, utilisez le retrait automatique, et ne misez jamais plus que ce que vous pouvez vous permettre de perdre. Vous devez avoir 18 ans ou plus, ou l'âge légal dans votre juridiction, selon le plus élevé. Quand vous êtes prêt, <a href="https://astro.fun/fr/play">jouez au crash game</a> et vérifiez votre première manche vous-même.</p>
 <hr />
 <p><em>18+. Jouez de manière responsable.</em></p>
-<p><em>astro.fun est un jeu crypto-natif utilisant l'USDC. Les crypto-actifs sont volatils ; ne jouez qu'avec des fonds que vous pouvez vous permettre de perdre.</em></p>
+<p><em>astro.fun est un jeu crypto-natif utilisant l'USDG. Les crypto-actifs sont volatils ; ne jouez qu'avec des fonds que vous pouvez vous permettre de perdre.</em></p>
 <p><em>Ce contenu est informatif et ne constitue pas un conseil financier, en investissement ou juridique.</em></p>
 <p><em>Le jeu comporte des risques et peut entraîner une dépendance. Si le jeu cesse d'être un plaisir, cherchez de l'aide. Interdit aux mineurs.</em></p>
 <p>[Keep JSON-LD verbatim]</p>

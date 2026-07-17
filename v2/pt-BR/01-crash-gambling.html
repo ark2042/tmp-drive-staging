@@ -12,7 +12,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <h2>Como funciona uma rodada de crash gambling, passo a passo</h2>
 <p>Cada rodada segue o mesmo ritmo. No Astro, funciona assim:</p>
 <ol>
-<li><strong>Faça sua aposta.</strong> Conecte sua carteira e defina o valor em USDC. O que limita qualquer aposta individual é o limite dinâmico de Kelly explicado na seção de estratégia abaixo, não um teto fixo.</li>
+<li><strong>Faça sua aposta.</strong> Conecte sua carteira e defina o valor em USDG. O que limita qualquer aposta individual é o limite dinâmico de Kelly explicado na seção de estratégia abaixo, não um teto fixo.</li>
 <li><strong>Contagem regressiva.</strong> A primeira aposta de uma rodada aciona uma contagem regressiva de 10 segundos. Outros jogadores entram nessa janela.</li>
 <li><strong>Apostas encerradas.</strong> Quando a contagem termina, nenhuma nova aposta é aceita para aquela rodada.</li>
 <li><strong>O multiplicador sobe.</strong> Começa em 1,00x e continua subindo. Não há teto fixo para o multiplicador em si, embora cada aposta tenha um limite efetivo definido pelo cash out forçado de Kelly (veja abaixo).</li>
@@ -22,7 +22,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <p>Você tem duas formas de sair. O cash out manual oferece controle total, mas expõe você ao timing e à latência de rede. O cash out automático permite definir um multiplicador-alvo com antecedência, e o sistema encerra por você no momento em que ele é atingido. A maioria dos jogadores cuidadosos combina os dois. Para a mecânica completa, incluindo como a liquidação on-chain mantém os cash outs instantâneos, veja nosso guia sobre <a href="https://astro.fun/pt/blog/how-to-play">como uma rodada funciona</a>.</p>
 <h2>As chances reais: house edge e RTP</h2>
 <p>Aqui está o número que a maioria dos sites evita. Todo crash game mantém um house edge, e no Astro ele é de <strong>3,03 %</strong>. Isso vem de uma regra simples na fórmula de crash: quando um valor específico cai em um múltiplo de 33 (matematicamente, <code>h % 33 === 0</code>), a rodada cai instantaneamente em 1,00x. Isso acontece com uma probabilidade de 1 em 33, o que dá 3,03 %.</p>
-<p>Em termos simples: para cada 1 USDC apostado, o retorno esperado no longo prazo é de cerca de 0,97 USDC. O retorno ao jogador (RTP) é de aproximadamente 96,97 %. Esse edge é o que permite ao jogo pagar os vencedores e continuar funcionando. Também é o motivo pelo qual nenhuma estratégia bate o jogo no longo prazo, e qualquer site que diga o contrário está mentindo para você.</p>
+<p>Em termos simples: para cada 1 USDG apostado, o retorno esperado no longo prazo é de cerca de 0,97 USDG. O retorno ao jogador (RTP) é de aproximadamente 96,97 %. Esse edge é o que permite ao jogo pagar os vencedores e continuar funcionando. Também é o motivo pelo qual nenhuma estratégia bate o jogo no longo prazo, e qualquer site que diga o contrário está mentindo para você.</p>
 <p>A comparação honesta fica assim:</p>
 <table>
 <thead>
@@ -60,15 +60,15 @@ border:1px solid #ccc;margin-bottom:18px;">
 <li><strong>Defina o tamanho das apostas.</strong> Uma regra comum é arriscar não mais de 1 % a 2 % do seu bankroll por rodada. As rodadas duram segundos, então as perdas se acumulam rápido se você apostar alto.</li>
 <li><strong>Estabeleça limites antes de começar.</strong> Decida seu stop-loss e seu lucro de saída com antecedência. O ritmo do crash gambling facilita perseguir perdas, o que é exatamente como as sessões dão errado.</li>
 </ul>
-<p>Há mais uma camada que vale entender. O Astro limita o quanto qualquer aposta individual pode ganhar usando um sistema estilo Kelly. Cada aposta pode ganhar até 2 % do bankroll atual como lucro, e todas as apostas em uma rodada combinadas são limitadas a 2,5 %. Se o seu lucro potencial atingir esse limite, você é automaticamente retirado no multiplicador máximo permitido. A fórmula é <code>Multiplicador Máximo = (Bankroll × 2 % / Valor da Aposta) + 1</code>. Com um bankroll de 100 USDC e uma aposta de 1 USDC, seu cash out forçado cai em 3,00x. Isso não é a casa cortando suas asas: é o que garante que o jogo sempre pode pagar. Você pode se aprofundar no timing e na mecânica de cash out no <a href="https://astro.fun/pt/blog/how-to-play">guia de como jogar</a>.</p>
+<p>Há mais uma camada que vale entender. O Astro limita o quanto qualquer aposta individual pode ganhar usando um sistema estilo Kelly. Cada aposta pode ganhar até 2 % do bankroll atual como lucro, e todas as apostas em uma rodada combinadas são limitadas a 2,5 %. Se o seu lucro potencial atingir esse limite, você é automaticamente retirado no multiplicador máximo permitido. A fórmula é <code>Multiplicador Máximo = (Bankroll × 2 % / Valor da Aposta) + 1</code>. Com um bankroll de 100 USDG e uma aposta de 1 USDG, seu cash out forçado cai em 3,00x. Isso não é a casa cortando suas asas: é o que garante que o jogo sempre pode pagar. Você pode se aprofundar no timing e na mecânica de cash out no <a href="https://astro.fun/pt/blog/how-to-play">guia de como jogar</a>.</p>
 <h2>Você pode prever o crash?</h2>
 <p>Não. E num jogo provably fair, esse é o ponto.</p>
 <p>Você vai encontrar aplicativos "crash predictor", bots e sinais pagos em toda parte. Eles não funcionam, e não podem funcionar, porque o resultado de cada rodada é fixado com antecedência por uma seed que permanece secreta até o fim da rodada. Prever o crash significaria reverter um hash keccak256 antes de ele ser revelado, o que não é algo que um aplicativo de loja de apps possa fazer. O que essas ferramentas fazem de verdade é tomar seu dinheiro ou sua conta.</p>
 <p>O único edge honesto no crash gambling é entender as chances e controlar suas saídas. Não há padrão oculto, porque a cadeia já foi escrita antes de você fazer sua aposta.</p>
 <h2>Crash gambling com cripto vs. com moeda fiduciária</h2>
 <p>A maioria dos crash games roda dentro de cassinos fiduciários, onde você deposita dinheiro e confia no operador para liquidar de forma justa. Os crash games cripto mudam duas coisas que importam.</p>
-<p>Primeiro, a verificabilidade. Num jogo on-chain, a âncora provably fair e os resultados das rodadas ficam numa blockchain pública, então a justiça pode ser verificada, não apenas prometida. Segundo, a custódia. Você joga com sua própria carteira em USDC, e os ganhos são liquidados on-chain ao final de cada rodada pelo contrato inteligente.</p>
-<p>Há ainda uma terceira camada. No Astro, o bankroll que sustenta cada aposta é aberto. Qualquer pessoa pode depositar USDC nele (taxa de entrada de 2 % aplicada no depósito), ganhar uma parcela de cada rodada que a casa joga e sacar a qualquer momento, com todo o pool publicamente verificável on-chain. Como qualquer posição de formação de mercado, envolve risco além do potencial de ganho: o bankroll ganha quando os jogadores perdem e perde quando os jogadores ganham. Se quiser estar do outro lado da mesa em vez de ser jogador, você pode <a href="https://astro.fun/pt/vault">participar do bankroll</a>.</p>
+<p>Primeiro, a verificabilidade. Num jogo on-chain, a âncora provably fair e os resultados das rodadas ficam numa blockchain pública, então a justiça pode ser verificada, não apenas prometida. Segundo, a custódia. Você joga com sua própria carteira em USDG, e os ganhos são liquidados on-chain ao final de cada rodada pelo contrato inteligente.</p>
+<p>Há ainda uma terceira camada. No Astro, o bankroll que sustenta cada aposta é aberto. Qualquer pessoa pode depositar USDG nele (taxa de entrada de 2 % aplicada no depósito), ganhar uma parcela de cada rodada que a casa joga e sacar a qualquer momento, com todo o pool publicamente verificável on-chain. Como qualquer posição de formação de mercado, envolve risco além do potencial de ganho: o bankroll ganha quando os jogadores perdem e perde quando os jogadores ganham. Se quiser estar do outro lado da mesa em vez de ser jogador, você pode <a href="https://astro.fun/pt/vault">participar do bankroll</a>.</p>
 <p>Quando as pessoas comparam crash gambling sites, essa é a verdadeira linha divisória: confie em mim versus verifique você mesmo.</p>
 <h2>Perguntas frequentes</h2>
 <h3>O que é crash gambling?</h3>
@@ -78,7 +78,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <h3>Os crash games são justos e aleatórios?</h3>
 <p>Num jogo provably fair, sim. O ponto de crash é fixado com antecedência por uma seed secreta e revelado após a rodada, sendo ao mesmo tempo imprevisível para os jogadores e impossível de alterar pela casa depois que a cadeia é ancorada.</p>
 <h3>Uma estratégia pode garantir vitória?</h3>
-<p>Não. Todo crash game tem um house edge — 3,03 % no Astro — portanto nenhuma estratégia ganha no longo prazo. A estratégia ajuda a gerenciar o risco e o bankroll, não a bater a matemática.</p>
+<p>Não. Todo crash game tem um house edge (3,03 % no Astro), portanto nenhuma estratégia ganha no longo prazo. A estratégia ajuda a gerenciar o risco e o bankroll, não a bater a matemática.</p>
 <h3>Crash gambling é habilidade ou sorte?</h3>
 <p>O ponto de crash é sorte. Seu timing, o tamanho das apostas e a disciplina são as partes que você controla, por isso o gerenciamento do bankroll importa mais do que qualquer padrão.</p>
 <h3>Qual é o house edge no Astro?</h3>
@@ -89,7 +89,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <p>Crash gambling é simples de aprender e fácil de subestimar. A mecânica é uma decisão sob pressão, as chances são um edge de 3,03 % (atualmente definido, verificável on-chain), e a única proteção real que você tem é a capacidade de verificar se o jogo é justo. O Astro é construído em torno desse último ponto: sem necessidade de confiança, só matemática que você pode verificar.</p>
 <p>Defina um orçamento, use o cash out automático e nunca aposte mais do que pode perder.</p>
 <hr />
-<p><em>18+. Jogue com responsabilidade. astro.fun é um jogo cripto-nativo que usa USDC. Criptoativos são voláteis; jogue apenas com recursos que você pode perder. Este conteúdo é informativo e não constitui aconselhamento financeiro, de investimento ou jurídico. Proibido para menores de 18 anos. Apostar pode causar dependência. Em caso de problemas com jogo, procure ajuda.</em></p>
+<p><em>18+. Jogue com responsabilidade. astro.fun é um jogo cripto-nativo que usa USDG. Criptoativos são voláteis; jogue apenas com recursos que você pode perder. Este conteúdo é informativo e não constitui aconselhamento financeiro, de investimento ou jurídico. Proibido para menores de 18 anos. Apostar pode causar dependência. Em caso de problemas com jogo, procure ajuda.</em></p>
 <!-- JSON-LD FAQPage -->
 
 <pre><code class="language-json">{
@@ -125,7 +125,7 @@ border:1px solid #ccc;margin-bottom:18px;">
       &quot;name&quot;: &quot;Uma estratégia pode garantir vitória no crash gambling?&quot;,
       &quot;acceptedAnswer&quot;: {
         &quot;@type&quot;: &quot;Answer&quot;,
-        &quot;text&quot;: &quot;Não. Todo crash game tem um house edge — 3,03 % no Astro — portanto nenhuma estratégia ganha no longo prazo. A estratégia ajuda a gerenciar o risco e o bankroll, não a bater a matemática.&quot;
+        &quot;text&quot;: &quot;Não. Todo crash game tem um house edge (3,03 % no Astro), portanto nenhuma estratégia ganha no longo prazo. A estratégia ajuda a gerenciar o risco e o bankroll, não a bater a matemática.&quot;
       }
     },
     {

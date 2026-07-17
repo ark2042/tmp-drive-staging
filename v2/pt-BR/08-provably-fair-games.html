@@ -64,7 +64,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <h2>Crash, como exemplo de trabalho</h2>
 <p>Uma rodada de crash é uma decisão sob pressão. Um multiplicador começa em 1,00x, sobe e, em algum ponto aleatório, cai. Faça cash out antes disso e você fica com a aposta multiplicada. Espere demais e perde. Veja como o provably fair envolve esse loop.</p>
 <p>Antes da rodada, o ponto de crash já existe. Ele é determinado por uma seed dentro de uma hash chain cujo hash final foi ancorado na blockchain antes de qualquer aposta. Enquanto o multiplicador sobe, o servidor guarda essa seed em segredo, então nenhum jogador e nenhum operador pode agir com base no conhecimento de onde o crash acontecerá. Quando a rodada termina, a seed é revelada. Qualquer pessoa pode fazer o hash dela, confirmar que ela se encaixa na cadeia e rodar a fórmula que a transforma no ponto de crash.</p>
-<p>É aqui também que o house edge fica, às claras. No Astro, o edge está atualmente definido em <strong>3,03 %</strong>. Ele vem de uma regra na fórmula de crash: quando um valor cai em um múltiplo de 33 (escrito <code>h % 33 === 0</code>), a rodada cai instantaneamente em 1,00x. Isso acontece com uma probabilidade de 1 em 33, ou seja, 3,03 %. Para cada 1 USDC apostado, o retorno esperado no longo prazo é de cerca de 0,97 USDC, então o retorno ao jogador é de aproximadamente 96,97 %. Esse edge é configurável on-chain pelo operador, mas nunca é escondido: seja qual for o valor definido, ele é público e verificável, que é o oposto de um número simplesmente informado. Para a mecânica de rodada e o timing de cash out, veja <a href="https://astro.fun/pt/blog/how-to-play">como uma rodada funciona</a>.</p>
+<p>É aqui também que o house edge fica, às claras. No Astro, o edge está atualmente definido em <strong>3,03 %</strong>. Ele vem de uma regra na fórmula de crash: quando um valor cai em um múltiplo de 33 (escrito <code>h % 33 === 0</code>), a rodada cai instantaneamente em 1,00x. Isso acontece com uma probabilidade de 1 em 33, ou seja, 3,03 %. Para cada 1 USDG apostado, o retorno esperado no longo prazo é de cerca de 0,97 USDG, então o retorno ao jogador é de aproximadamente 96,97 %. Esse edge é configurável on-chain pelo operador, mas nunca é escondido: seja qual for o valor definido, ele é público e verificável, que é o oposto de um número simplesmente informado. Para a mecânica de rodada e o timing de cash out, veja <a href="https://astro.fun/pt/blog/how-to-play">como uma rodada funciona</a>.</p>
 <p><a href="https://astro.fun/pt/play">Veja como jogar</a></p>
 <h2>Como verificar um jogo provably fair por conta própria</h2>
 <p>Você não precisa ser desenvolvedor para checar uma rodada. O fluxo é o mesmo em qualquer jogo provably fair honesto.</p>
@@ -103,7 +103,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <hr />
 <blockquote>
 <p><strong>18+. Jogue com responsabilidade.</strong>
-astro.fun é um jogo cripto-nativo que usa USDC. Criptoativos são voláteis; jogue apenas com recursos que você pode perder.
+astro.fun é um jogo cripto-nativo que usa USDG. Criptoativos são voláteis; jogue apenas com recursos que você pode perder.
 Este conteúdo é informativo e não constitui aconselhamento financeiro, de investimento ou jurídico.
 Proibido para menores de 18 anos. Apostar pode causar dependência.
 Em caso de problemas com jogo, procure ajuda.</p>

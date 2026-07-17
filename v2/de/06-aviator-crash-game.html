@@ -45,7 +45,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <tr>
 <td>Wo du spielst</td>
 <td>Konto bei einem Drittanbieter-Casino</td>
-<td>Dein eigenes Wallet, in USDC</td>
+<td>Dein eigenes Wallet, in USDG</td>
 </tr>
 <tr>
 <td>Fairness-Modell</td>
@@ -70,8 +70,8 @@ border:1px solid #ccc;margin-bottom:18px;">
 </tbody>
 </table>
 <p>Drei Dinge ändern sich, wenn das Spiel on-chain läuft.</p>
-<p><strong>Verwahrung.</strong> Bei Aviator zahlst du in ein Casino ein und vertraust ihm, dein Guthaben zu halten und auszuzahlen. Bei Astro spielst du von deinem eigenen Wallet, deine Einsätze sind in USDC und Gewinne werden am Ende jeder Runde über den Smart Contract on-chain abgerechnet. Was einen einzelnen Einsatz begrenzt, ist keine feste Obergrenze, sondern ein dynamisches Kelly-Limit: Jeder Einsatz kann bis zu 2 % des Bankrolls als Gewinn erzielen, vor einem automatischen cash out.</p>
-<p><strong>Nachprüfbare Fairness.</strong> Eine rundenbezogene Seed-Prüfung ist gut. Eine vorgefertigte Kette ist stärker. Astro generiert vorab eine Kette geheimer Seeds, bei der jeder Seed der keccak256-Hash des nächsten ist, und veröffentlicht dann den letzten Hash als öffentlichen Anker auf der Blockchain, bevor jemand wettet. Dieser einzelne Wert verpflichtet die Plattform zu allen zukünftigen Ergebnissen im Voraus. Das Ändern eines Seeds würde die gesamte Kette öffentlich zerstören. Du musst kein Wort davon glauben — du kannst <a href="https://astro.fun/de/blog/provably-fair">jede Runde selbst nachprüfen</a>.</p>
+<p><strong>Verwahrung.</strong> Bei Aviator zahlst du in ein Casino ein und vertraust ihm, dein Guthaben zu halten und auszuzahlen. Bei Astro spielst du von deinem eigenen Wallet, deine Einsätze sind in USDG und Gewinne werden am Ende jeder Runde über den Smart Contract on-chain abgerechnet. Was einen einzelnen Einsatz begrenzt, ist keine feste Obergrenze, sondern ein dynamisches Kelly-Limit: Jeder Einsatz kann bis zu 2 % des Bankrolls als Gewinn erzielen, vor einem automatischen cash out.</p>
+<p><strong>Nachprüfbare Fairness.</strong> Eine rundenbezogene Seed-Prüfung ist gut. Eine vorgefertigte Kette ist stärker. Astro generiert vorab eine Kette geheimer Seeds, bei der jeder Seed der keccak256-Hash des nächsten ist, und veröffentlicht dann den letzten Hash als öffentlichen Anker auf der Blockchain, bevor jemand wettet. Dieser einzelne Wert verpflichtet die Plattform zu allen zukünftigen Ergebnissen im Voraus. Das Ändern eines Seeds würde die gesamte Kette öffentlich zerstören. Du musst kein Wort davon glauben: du kannst <a href="https://astro.fun/de/blog/provably-fair">jede Runde selbst nachprüfen</a>.</p>
 <p><strong>Ein Edge, den du lesen kannst.</strong> Astros house edge ist derzeit auf 3,03 % gesetzt, vom Betreiber on-chain konfigurierbar, aber nie verborgen. Er kommt von einem sofortigen Crash, der immer dann eintritt, wenn ein Wert ein Vielfaches von 33 trifft, im Code geschrieben als <code>h % 33 === 0</code>, was 1 von 33 Mal passiert. Das setzt den RTP bei rund 96,97 %, und es ist veröffentlicht, nicht versprochen. Es gibt sogar eine Seite, die die meisten Casinos nie anbieten: Der Bankroll, der jeden Einsatz absichert, ist offen, sodass du <a href="https://astro.fun/de/vault">am Bankroll teilnehmen</a> kannst (eine Eintrittsgebühr von 2 % gilt beim Einzahlen), einen Anteil an jeder Runde verdienen, die er spielt, und jederzeit abheben. Wie jede Market-Making-Position birgt es Risiko und Gewinnpotenzial gleichermaßen.</p>
 <p>Nichts davon lässt den house edge verschwinden. Beide Spiele haben einen, und langfristig kann keines geschlagen werden. Der Unterschied ist, ob dir die Chancen gesagt oder gezeigt werden.</p>
 <p><a href="https://astro.fun/de/play">So funktioniert es</a></p>
@@ -87,7 +87,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <h3>Was sind der Aviator RTP und house edge?</h3>
 <p>Spribe listet Aviators RTP bei 97 %, was einen house edge von etwa 3 % impliziert, obwohl Rezensenten bemerken, dass der effektive Wert je nach Betreiber variieren kann. Zum Vergleich: Astro hat einen 3,03 %-Edge (derzeit gesetzt) mit einem RTP von knapp 96,97 %, abgeleitet aus einem 1-zu-33-Sofort-Crash und on-chain nachprüfbar.</p>
 <h3>Wie unterscheidet sich Aviator von einem crypto crash game wie Astro?</h3>
-<p>Das Gameplay ist nahezu identisch. Der Unterschied liegt in Verwahrung und Nachprüfbarkeit. Aviator läuft im Casino eines Drittanbieters, der dein Guthaben hält und die Chancen deklariert. Ein On-Chain-Crash wie Astro wird von deinem eigenen Wallet in USDC gespielt, rechnet on-chain ab und verpflichtet sich vorab zu jedem Ergebnis durch eine öffentliche Hash-Kette, die du selbst prüfen kannst.</p>
+<p>Das Gameplay ist nahezu identisch. Der Unterschied liegt in Verwahrung und Nachprüfbarkeit. Aviator läuft im Casino eines Drittanbieters, der dein Guthaben hält und die Chancen deklariert. Ein On-Chain-Crash wie Astro wird von deinem eigenen Wallet in USDG gespielt, rechnet on-chain ab und verpflichtet sich vorab zu jedem Ergebnis durch eine öffentliche Hash-Kette, die du selbst prüfen kannst.</p>
 <h3>Kann man bei Aviator gewinnen?</h3>
 <p>Einzelne Runden kannst du gewinnen, und diszipliniertes Bankroll-Management und auto-cashout helfen dir, Risiko zu kontrollieren. Du kannst den house edge bei keinem crash game langfristig schlagen, und jeder, der ein garantiertes System oder einen Predictor verkauft, lügt. Behandle es als Unterhaltung mit einem festen Budget.</p>
 <h2>Klug spielen und alles nachprüfen</h2>
@@ -95,7 +95,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <p>Das ist die Lücke, die ein On-Chain-Crash zu schließen baut ist. Derselbe Ein-Entscheidungs-Loop, aber von deinem Wallet gespielt, on-chain abgerechnet, mit einem 3,03 %-Edge (derzeit gesetzt, on-chain nachprüfbar) und einer Fairness-Kette, die jeder prüfen kann. Kein Vertrauen erforderlich, nur Mathematik, die du lesen kannst.</p>
 <p>Was auch immer du spielst, setze ein Budget, nutze auto-cashout und setze nie mehr, als du dir leisten kannst zu verlieren. Du musst 18 Jahre oder älter sein, oder das gesetzliche Mindestalter in deiner Jurisdiktion, je nachdem, was höher ist.</p>
 <hr />
-<p><em>18+. Spielen Sie verantwortungsbewusst. astro.fun ist ein krypto-natives Spiel mit USDC. Krypto-Werte sind volatil; spielen Sie nur mit Geld, dessen Verlust Sie sich leisten können. Dieser Inhalt dient der Information und stellt keine Finanz-, Anlage- oder Rechtsberatung dar. Glücksspiel birgt Risiken und kann abhängig machen. Wenn das Spielen keinen Spaß mehr macht, suchen Sie Hilfe. Die Verfügbarkeit hängt von den lokalen Gesetzen ab. Es liegt in Ihrer Verantwortung, die Rechtslage an Ihrem Wohnort zu kennen. Spielen ab 18 Jahren.</em></p>
+<p><em>18+. Spielen Sie verantwortungsbewusst. astro.fun ist ein krypto-natives Spiel mit USDG. Krypto-Werte sind volatil; spielen Sie nur mit Geld, dessen Verlust Sie sich leisten können. Dieser Inhalt dient der Information und stellt keine Finanz-, Anlage- oder Rechtsberatung dar. Glücksspiel birgt Risiken und kann abhängig machen. Wenn das Spielen keinen Spaß mehr macht, suchen Sie Hilfe. Die Verfügbarkeit hängt von den lokalen Gesetzen ab. Es liegt in Ihrer Verantwortung, die Rechtslage an Ihrem Wohnort zu kennen. Spielen ab 18 Jahren.</em></p>
 <!-- JSON-LD FAQPage -->
 
 <pre><code class="language-json">{

@@ -9,11 +9,11 @@ border:1px solid #ccc;margin-bottom:18px;">
 <h2>What an online crash game actually is</h2>
 <p>An online crash game is a fast betting game built around one number. You place a bet, a multiplier starts at 1.00x and climbs, and you cash out before it crashes at a random point. Cash out at 2.00x and your bet doubles. Hold to 10x and it pays ten times your stake. Wait too long and the bet is gone. Each round takes a few seconds.</p>
 <p>"Online" means it runs in your browser, in timed rounds, and you are not playing against other people. You are playing against your own timing. Everyone in a round shares the same multiplier and the same crash point. The only thing that separates a winning bet from a losing one is when you choose to exit.</p>
-<p>Most crash games today are crypto games. You bet in a token, the game runs on-chain or settles on-chain, and your funds stay in your wallet rather than in a casino balance. Astro is a crypto crash game on an EVM chain where you bet in USDC. That detail matters more than it sounds, and we will come back to why.</p>
+<p>Most crash games today are crypto games. You bet in a token, the game runs on-chain or settles on-chain, and your funds stay in your wallet rather than in a casino balance. Astro is a crypto crash game on an EVM chain where you bet in USDG. That detail matters more than it sounds, and we will come back to why.</p>
 <h2>How a round plays out, start to finish</h2>
 <p>Every crash game online follows the same rhythm. On Astro a round looks like this:</p>
 <ol>
-<li><strong>Place your bet.</strong> Connect your wallet and set your amount in USDC. What actually limits any single bet is a dynamic Kelly cap (each bet can win up to 2% of the bankroll as profit before an automatic cash-out), not a flat ceiling.</li>
+<li><strong>Place your bet.</strong> Connect your wallet and set your amount in USDG. What actually limits any single bet is a dynamic Kelly cap (each bet can win up to 2% of the bankroll as profit before an automatic cash-out), not a flat ceiling.</li>
 <li><strong>Countdown.</strong> The first bet of a round starts a 10 second countdown. Other players join during that window.</li>
 <li><strong>Betting closes.</strong> When the countdown ends, no new bets are accepted for that round.</li>
 <li><strong>The multiplier rises.</strong> It climbs from 1.00x and keeps going. There is no fixed ceiling on the multiplier itself, though each bet has an effective cap set by the Kelly forced cash-out.</li>
@@ -27,7 +27,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 </blockquote>
 <h2>What to expect: the odds and the payout</h2>
 <p>Here is the number most sites will not put in writing. Every crash game keeps a house edge, and on Astro it is <strong>3.03%</strong>. It comes from one rule in the crash formula: when a specific value lands on a multiple of 33 (<code>h % 33 === 0</code>), the round instantly crashes at 1.00x. That happens with a probability of 1 in 33, which is 3.03%.</p>
-<p>In plain terms, for every 1 USDC you wager, the expected return over the long run is about 0.97 USDC. The return to player, or RTP, is roughly 96.97%. That edge is what funds the payouts and keeps the game running. It is also the reason no strategy wins over time, and any site promising otherwise is selling you something.</p>
+<p>In plain terms, for every 1 USDG you wager, the expected return over the long run is about 0.97 USDG. The return to player, or RTP, is roughly 96.97%. That edge is what funds the payouts and keeps the game running. It is also the reason no strategy wins over time, and any site promising otherwise is selling you something.</p>
 <p>The honest comparison:</p>
 <table>
 <thead>
@@ -60,7 +60,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <h2>How to start playing online, step by step</h2>
 <p>Getting started takes a few minutes. Here is the path from nothing to your first cash out.</p>
 <ol>
-<li><strong>Get a wallet and some USDC.</strong> You need a crypto wallet and a small amount of USDC on a supported EVM network. Do not deposit more than you are willing to lose.</li>
+<li><strong>Get a wallet and some USDG.</strong> You need a crypto wallet and a small amount of USDG on a supported EVM network. Do not deposit more than you are willing to lose.</li>
 <li><strong>Open the game in your browser.</strong> Go to the crash game and connect your wallet. There is nothing to install.</li>
 <li><strong>Set a budget first.</strong> Decide how much your whole session is worth before you place a bet. Treat it as the cost of entertainment, not an investment.</li>
 <li><strong>Place a small first bet with an auto target.</strong> Start tiny. Set an auto cash out around 1.5x to 2x so your first round exits on its own and you can watch the full loop without the pressure of a manual click.</li>
@@ -68,14 +68,14 @@ border:1px solid #ccc;margin-bottom:18px;">
 </ol>
 <p>That fifth step is the one most new players skip and the one that actually protects you. Verifying once teaches you what a fair game looks like.</p>
 <h2>Playing crash games online on mobile</h2>
-<p>You do not need an app. A good crash game online runs in the mobile browser, so you connect the same wallet, bet the same USDC, and get the same provably fair results as on desktop. The layout just shrinks to one thumb.</p>
+<p>You do not need an app. A good crash game online runs in the mobile browser, so you connect the same wallet, bet the same USDG, and get the same provably fair results as on desktop. The layout just shrinks to one thumb.</p>
 <p>Mobile does change one thing: latency. A laggy connection plus a manual cash out is a bad combination, because the multiplier moves in fractions of a second. The fix is auto cash out. Set your target before the round, and the system exits at that number regardless of your signal. On mobile especially, an auto target is less a convenience and more a safety belt.</p>
 <h2>How to choose a crash game online safely</h2>
 <p>There are dozens of crash games online, and most of them want the same thing: your deposit. A short checklist sorts the safe ones from the rest.</p>
 <ul>
 <li><strong>Can you verify the results?</strong> Provably fair with an on-chain anchor beats "certified random" every time. If you cannot check a round yourself, you are trusting a brand, not math.</li>
 <li><strong>Is the house edge public?</strong> A site that hides its edge is hiding its odds. Astro's is 3.03%, stated up front.</li>
-<li><strong>Do you keep custody?</strong> Playing from your own wallet in USDC means your funds are not sitting in someone else's balance.</li>
+<li><strong>Do you keep custody?</strong> Playing from your own wallet in USDG means your funds are not sitting in someone else's balance.</li>
 <li><strong>Are withdrawals clear and on your terms?</strong> You should be able to claim winnings without hoops.</li>
 <li><strong>Are there responsible gambling tools?</strong> Limits and clear age rules are a sign the operator is not just chasing deposits.</li>
 </ul>
@@ -85,7 +85,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <h3>What is an online crash game?</h3>
 <p>An online crash game is a browser-based betting game where you place a bet, watch a multiplier rise from 1.00x, and cash out before it crashes at a random point. Cashing out early secures a smaller win, holding longer risks losing the bet for a bigger payout.</p>
 <h3>How do I start playing a crash game online?</h3>
-<p>Get a crypto wallet with a small amount of USDC, open the game in your browser, connect the wallet, set a session budget, and place a small first bet with an auto cash out target around 1.5x to 2x. After the round, confirm you were paid and that the seed was revealed.</p>
+<p>Get a crypto wallet with a small amount of USDG, open the game in your browser, connect the wallet, set a session budget, and place a small first bet with an auto cash out target around 1.5x to 2x. After the round, confirm you were paid and that the seed was revealed.</p>
 <h3>Can I play crash games online on mobile?</h3>
 <p>Yes. A good crash game runs in the mobile browser with no app to install. You connect the same wallet and get the same provably fair results. Using auto cash out is smart on mobile, since it removes the latency risk of a manual exit.</p>
 <h3>Are online crash games fair?</h3>
@@ -95,13 +95,13 @@ border:1px solid #ccc;margin-bottom:18px;">
 <h3>Can a strategy or predictor guarantee a win online?</h3>
 <p>No. Every crash game has a house edge, so no strategy or predictor beats it over the long run. Provably fair results are locked before you bet, so no app can know the outcome in advance. Strategy helps you manage risk and your bankroll, not beat the math.</p>
 <h3>Do I need crypto to play?</h3>
-<p>On a crypto crash game like Astro, yes. You play from your own wallet in USDC, and winnings settle on-chain. That setup is what makes results verifiable and keeps funds in your custody rather than a casino balance.</p>
+<p>On a crypto crash game like Astro, yes. You play from your own wallet in USDG, and winnings settle on-chain. That setup is what makes results verifiable and keeps funds in your custody rather than a casino balance.</p>
 <h3>Is there an age requirement?</h3>
 <p>Yes. Online crash games are real-money gambling. You must be 18 or older, or the legal age in your jurisdiction, whichever is higher. Only play with money you can afford to lose.</p>
 <h2>Play smart, and verify everything</h2>
 <p>Playing a crash game online is simple to learn and easy to misjudge. The mechanic is one decision under pressure, the odds are a 3.03% edge (currently set, verifiable on-chain), and your only real protection is the ability to confirm the game is fair. Astro is built around that last point: no trust required, just math you can check.</p>
 <p>Set a budget, lean on auto cash out, and never bet more than you can afford to lose. You must be 18 or older, or the legal age in your jurisdiction, whichever is higher. When you are ready, <a href="https://astro.fun/en/play">start playing</a> and verify your first round yourself.</p>
-<p><strong>Disclaimers.</strong> 18+. Play responsibly. astro.fun is a crypto-native game using USDC. Crypto assets are volatile; only play with funds you can afford to lose. This content is informational and does not constitute financial, investment, or legal advice. Availability depends on your local laws. It is your responsibility to know the laws where you live. Gambling involves risk and can be addictive. If playing stops being fun, seek help.</p>
+<p><strong>Disclaimers.</strong> 18+. Play responsibly. astro.fun is a crypto-native game using USDG. Crypto assets are volatile; only play with funds you can afford to lose. This content is informational and does not constitute financial, investment, or legal advice. Availability depends on your local laws. It is your responsibility to know the laws where you live. Gambling involves risk and can be addictive. If playing stops being fun, seek help.</p>
 <!-- JSON-LD FAQPage -->
 
 <pre><code class="language-json">{
@@ -121,7 +121,7 @@ border:1px solid #ccc;margin-bottom:18px;">
       &quot;name&quot;: &quot;How do I start playing a crash game online?&quot;,
       &quot;acceptedAnswer&quot;: {
         &quot;@type&quot;: &quot;Answer&quot;,
-        &quot;text&quot;: &quot;Get a crypto wallet with a small amount of USDC, open the game in your browser, connect the wallet, set a session budget, and place a small first bet with an auto cash out target around 1.5x to 2x. After the round, confirm you were paid and that the seed was revealed.&quot;
+        &quot;text&quot;: &quot;Get a crypto wallet with a small amount of USDG, open the game in your browser, connect the wallet, set a session budget, and place a small first bet with an auto cash out target around 1.5x to 2x. After the round, confirm you were paid and that the seed was revealed.&quot;
       }
     },
     {
@@ -161,7 +161,7 @@ border:1px solid #ccc;margin-bottom:18px;">
       &quot;name&quot;: &quot;Do I need crypto to play a crash game online?&quot;,
       &quot;acceptedAnswer&quot;: {
         &quot;@type&quot;: &quot;Answer&quot;,
-        &quot;text&quot;: &quot;On a crypto crash game like Astro, yes. You play from your own wallet in USDC, and winnings settle on-chain. That setup is what makes results verifiable and keeps funds in your custody rather than a casino balance.&quot;
+        &quot;text&quot;: &quot;On a crypto crash game like Astro, yes. You play from your own wallet in USDG, and winnings settle on-chain. That setup is what makes results verifiable and keeps funds in your custody rather than a casino balance.&quot;
       }
     },
     {

@@ -5,16 +5,16 @@ border:1px solid #ccc;margin-bottom:18px;">
 <h1>Crypto Crash Games: A Beginner's Guide to On-Chain Multiplier Betting</h1>
 <p>A crypto crash game has one rule. A multiplier starts at 1.00x and climbs. You cash out before it crashes, and you keep your bet multiplied. You wait too long, it busts, and the bet is gone. Rounds last seconds.</p>
 <p>The rule is easy. Trusting the game is the hard part. Search any crash game crypto term and you hit the same wall of questions: is it rigged, can the operator decide when I lose, where does my money actually go? Those are the right questions. Most crypto casinos answer them with a badge that says "provably fair" and hope you stop reading.</p>
-<p>This guide does not do that. We explain what a crypto crash game is, how it differs from the fiat version, how wallets and USDC fit in, and how you can verify any round yourself instead of taking anyone's word for it. If you want to watch a round while you read, <a href="https://astro.fun/en/play">play the crash game</a> and follow along.</p>
+<p>This guide does not do that. We explain what a crypto crash game is, how it differs from the fiat version, how wallets and USDG fit in, and how you can verify any round yourself instead of taking anyone's word for it. If you want to watch a round while you read, <a href="https://astro.fun/en/play">play the crash game</a> and follow along.</p>
 <h2>What is a crypto crash game?</h2>
 <p>A crypto crash game is a fast multiplier game played with cryptocurrency. You place a bet, a number rises from 1.00x, and you cash out before it crashes at a random point. Cash out at 2.00x, you double your bet. Cash out at 10x, you win ten times your stake. Miss the crash, you lose the bet.</p>
-<p>That part is the same as any crash game. The word "crypto" changes two things underneath. You bet from your own wallet instead of a casino balance, and the results settle on a blockchain instead of inside a private database. On Astro, that means the entire game runs on-chain on an EVM network, with bets placed in USDC.</p>
+<p>That part is the same as any crash game. The word "crypto" changes two things underneath. You bet from your own wallet instead of a casino balance, and the results settle on a blockchain instead of inside a private database. On Astro, that means the entire game runs on-chain on an EVM network, with bets placed in USDG.</p>
 <p>The format itself is not new. Bustabit launched the original crash game in 2014, and Spribe's Aviator made it mainstream in 2019. What is new is moving the trust layer out of the operator's hands and onto a public ledger. That is the whole pitch of an on-chain crash game.</p>
 <h2>Crypto crash game vs fiat crash game: the real difference</h2>
 <p>Most crash games live inside fiat casinos. You deposit money, you play, and you trust the operator to settle every round honestly. The fairness is asserted, not shown. If you want to check it, you cannot.</p>
 <p>A crypto crash game running on-chain changes the two things that actually matter.</p>
 <p>First, verifiability. The data that proves the game is fair lives on a public blockchain, so anyone can check it. Fairness becomes something you confirm, not something you are told.</p>
-<p>Second, custody. You play from your own wallet in USDC. Winnings settle on-chain through a smart contract at the end of each round, against a result the platform committed to in advance.</p>
+<p>Second, custody. You play from your own wallet in USDG. Winnings settle on-chain through a smart contract at the end of each round, against a result the platform committed to in advance.</p>
 <table>
 <thead>
 <tr>
@@ -27,7 +27,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <tr>
 <td>Where you play from</td>
 <td>Casino account balance</td>
-<td>Your own wallet (USDC)</td>
+<td>Your own wallet (USDG)</td>
 </tr>
 <tr>
 <td>Who settles the round</td>
@@ -47,13 +47,13 @@ border:1px solid #ccc;margin-bottom:18px;">
 </tbody>
 </table>
 <p>When people compare crash games, this is the real dividing line. Trust me versus check for yourself.</p>
-<h2>Wallets, USDC, and how the money moves</h2>
-<p>If you are new to crypto, this is the part that sounds intimidating and is not. You need a crypto wallet and some USDC, the dollar-pegged stablecoin. One USDC is meant to track one US dollar, so you are not betting on a coin's price swinging while you play.</p>
-<p>On Astro, the flow is simple. You connect your wallet, set your bet in USDC, and play. What limits any single bet is not a flat ceiling but a dynamic Kelly cap: the system automatically cashes you out once your potential profit reaches 2% of the bankroll. When you cash out, the server records it instantly, because waiting for a blockchain confirmation mid-round would be far too slow. Then the smart contract settles everything on-chain at the end of the round, checking each cash out against the actual crash point.</p>
+<h2>Wallets, USDG, and how the money moves</h2>
+<p>If you are new to crypto, this is the part that sounds intimidating and is not. You need a crypto wallet and some USDG (Global Dollar), a dollar-pegged stablecoin issued by Paxos, a regulated issuer. One USDG is meant to track one US dollar, so you are not betting on a coin's price swinging while you play.</p>
+<p>On Astro, the flow is simple. You connect your wallet, set your bet in USDG, and play. What limits any single bet is not a flat ceiling but a dynamic Kelly cap: the system automatically cashes you out once your potential profit reaches 2% of the bankroll. When you cash out, the server records it instantly, because waiting for a blockchain confirmation mid-round would be far too slow. Then the smart contract settles everything on-chain at the end of the round, checking each cash out against the actual crash point.</p>
 <p>Withdrawing works on a "pull payment" model, which is a security pattern, not a hurdle. Your balance sits in the smart contract, and you press Claim to pull your funds to your wallet when you want them. You are never asking an operator to "approve" a payout. The contract already owes you.</p>
 <h2>The real odds: house edge and RTP</h2>
 <p>Here is the number most sites bury. Every crash game keeps a house edge, and on Astro it is <strong>3.03%</strong>. It comes from one rule in the crash formula. When a specific value lands on a multiple of 33 (mathematically, <code>h % 33 === 0</code>), the round instantly crashes at 1.00x. That happens with a probability of 1 in 33, which is 3.03%.</p>
-<p>In plain terms, for every 1 USDC you wager, the expected long-run return is about 0.97 USDC. The return to player (RTP) is roughly 96.97%. That edge is what funds the payouts and keeps the game running. It is also the reason no strategy beats the game over time. Any site that promises otherwise is selling you something.</p>
+<p>In plain terms, for every 1 USDG you wager, the expected long-run return is about 0.97 USDG. The return to player (RTP) is roughly 96.97%. That edge is what funds the payouts and keeps the game running. It is also the reason no strategy beats the game over time. Any site that promises otherwise is selling you something.</p>
 <table>
 <thead>
 <tr>
@@ -87,7 +87,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <h2>How to start safely</h2>
 <p>Getting started takes a few minutes. Doing it sensibly takes a few rules.</p>
 <ol>
-<li><strong>Get a wallet and some USDC.</strong> Fund a crypto wallet with USDC on a supported EVM network. Only use money you are fine losing.</li>
+<li><strong>Get a wallet and some USDG.</strong> Fund a crypto wallet with USDG on a supported EVM network. Only use money you are fine losing.</li>
 <li><strong>Connect and set a budget.</strong> Connect your wallet to Astro and decide your session budget before you place a single bet.</li>
 <li><strong>Use auto cash out at first.</strong> Setting a target removes panic. New players often sit at 1.5x to 2x for frequent small wins.</li>
 <li><strong>Bet small.</strong> A common rule is risking no more than 1% to 2% of your bankroll per round. Rounds are fast, so losses compound fast.</li>
@@ -99,15 +99,15 @@ border:1px solid #ccc;margin-bottom:18px;">
 <p>18+. Play responsibly. Availability depends on your local laws. Gambling involves risk and can be addictive. If playing stops being fun, seek help.</p>
 </blockquote>
 <h2>Want to be the house? The Vault</h2>
-<p>Most players only ever sit on the player side of the table. On Astro, you do not have to. The bankroll that backs every bet is open. You can deposit USDC into it (a 2% entry fee applies on deposit), earn a share of every round the house plays, and withdraw at any time, with the whole pool publicly verifiable on-chain. Like any market-making position, it carries risk as well as upside: the bankroll wins when players lose and loses when players win.</p>
+<p>Most players only ever sit on the player side of the table. On Astro, you do not have to. The bankroll that backs every bet is open. You can deposit USDG into it (a 2% entry fee applies on deposit), earn a share of every round the house plays, and withdraw at any time, with the whole pool publicly verifiable on-chain. Like any market-making position, it carries risk as well as upside: the bankroll wins when players lose and loses when players win.</p>
 <p>It is the same transparency turned around. Instead of betting against the house, you become part of it, and you can audit the bankroll the same way you audit a round. If that is the side you want, you can <a href="https://astro.fun/en/vault">be part of the bankroll</a>.</p>
 <h2>Frequently asked questions</h2>
 <h3>What is a crypto crash game?</h3>
-<p>A crypto crash game is a multiplier game played with cryptocurrency, where you bet, watch a number rise from 1.00x, and cash out before it crashes at a random point. On an on-chain game like Astro, bets are placed in USDC from your own wallet and rounds settle on a public blockchain.</p>
+<p>A crypto crash game is a multiplier game played with cryptocurrency, where you bet, watch a number rise from 1.00x, and cash out before it crashes at a random point. On an on-chain game like Astro, bets are placed in USDG from your own wallet and rounds settle on a public blockchain.</p>
 <h3>How is a crypto crash game different from a fiat crash game?</h3>
 <p>A fiat crash game runs inside a casino's private system, so you trust the operator to settle fairly. A crypto crash game on-chain lets you play from your own wallet and settles results on a public blockchain, so fairness is verifiable rather than just claimed.</p>
 <h3>Do I need a crypto wallet to play?</h3>
-<p>Yes. You connect a crypto wallet and bet in USDC, a dollar-pegged stablecoin. Winnings settle on-chain at the end of each round, and you withdraw by pressing Claim to pull funds back to your wallet.</p>
+<p>Yes. You connect a crypto wallet and bet in USDG, a dollar-pegged stablecoin. Winnings settle on-chain at the end of each round, and you withdraw by pressing Claim to pull funds back to your wallet.</p>
 <h3>Are crypto crash games fair?</h3>
 <p>On a provably fair game, yes. Astro publishes a cryptographic anchor on-chain before any bets, using a keccak256 hash chain, then reveals each round's seed afterward so anyone can confirm the result was not changed. The risk comes from unverifiable sites and fake predictor tools, not the format.</p>
 <h3>What is the house edge on Astro?</h3>
@@ -119,7 +119,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <h2>Play smart, and verify everything</h2>
 <p>A crypto crash game is easy to learn and easy to misjudge. The loop is one decision under pressure, the odds are a 3.03% edge (currently set, verifiable on-chain), and the real protection you have is the ability to check that the game is fair. Astro is built around that last point. No trust required, just math you can verify.</p>
 <p>Get a wallet, set a budget, use auto cash out, and never bet more than you can afford to lose. You must be 18 or older, or the legal age in your jurisdiction, whichever is higher. When you are ready, <a href="https://astro.fun/en/play">play the crash game</a> and verify your first round yourself.</p>
-<p><strong>Disclaimers.</strong> 18+. Play responsibly. astro.fun is a crypto-native game using USDC. Crypto assets are volatile; only play with funds you can afford to lose. This content is informational and does not constitute financial, investment, or legal advice. Availability depends on your local laws. It is your responsibility to know the laws where you live. Gambling involves risk and can be addictive. If playing stops being fun, seek help.</p>
+<p><strong>Disclaimers.</strong> 18+. Play responsibly. astro.fun is a crypto-native game using USDG. Crypto assets are volatile; only play with funds you can afford to lose. This content is informational and does not constitute financial, investment, or legal advice. Availability depends on your local laws. It is your responsibility to know the laws where you live. Gambling involves risk and can be addictive. If playing stops being fun, seek help.</p>
 <!-- JSON-LD FAQPage -->
 
 <pre><code class="language-json">{
@@ -131,7 +131,7 @@ border:1px solid #ccc;margin-bottom:18px;">
       &quot;name&quot;: &quot;What is a crypto crash game?&quot;,
       &quot;acceptedAnswer&quot;: {
         &quot;@type&quot;: &quot;Answer&quot;,
-        &quot;text&quot;: &quot;A crypto crash game is a multiplier game played with cryptocurrency, where you bet, watch a number rise from 1.00x, and cash out before it crashes at a random point. On an on-chain game like Astro, bets are placed in USDC from your own wallet and rounds settle on a public blockchain.&quot;
+        &quot;text&quot;: &quot;A crypto crash game is a multiplier game played with cryptocurrency, where you bet, watch a number rise from 1.00x, and cash out before it crashes at a random point. On an on-chain game like Astro, bets are placed in USDG from your own wallet and rounds settle on a public blockchain.&quot;
       }
     },
     {
@@ -147,7 +147,7 @@ border:1px solid #ccc;margin-bottom:18px;">
       &quot;name&quot;: &quot;Do I need a crypto wallet to play a crypto crash game?&quot;,
       &quot;acceptedAnswer&quot;: {
         &quot;@type&quot;: &quot;Answer&quot;,
-        &quot;text&quot;: &quot;Yes. You connect a crypto wallet and bet in USDC, a dollar-pegged stablecoin. Winnings settle on-chain at the end of each round, and you withdraw by pressing Claim to pull funds back to your wallet.&quot;
+        &quot;text&quot;: &quot;Yes. You connect a crypto wallet and bet in USDG, a dollar-pegged stablecoin. Winnings settle on-chain at the end of each round, and you withdraw by pressing Claim to pull funds back to your wallet.&quot;
       }
     },
     {

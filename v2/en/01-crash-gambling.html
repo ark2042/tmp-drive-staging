@@ -12,7 +12,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <h2>How a crash gambling round works, step by step</h2>
 <p>Every round follows the same rhythm. On Astro, it runs like this:</p>
 <ol>
-<li><strong>Place your bet.</strong> Connect your wallet and set your amount in USDC. What actually limits any single bet is the dynamic Kelly cap explained in the strategy section below, not a flat ceiling.</li>
+<li><strong>Place your bet.</strong> Connect your wallet and set your amount in USDG. What actually limits any single bet is the dynamic Kelly cap explained in the strategy section below, not a flat ceiling.</li>
 <li><strong>Countdown.</strong> The first bet of a round triggers a 10 second countdown. Other players join during this window.</li>
 <li><strong>Betting closes.</strong> Once the countdown ends, no new bets are accepted for that round.</li>
 <li><strong>The multiplier rises.</strong> It climbs from 1.00x and keeps going. There is no fixed ceiling on the multiplier itself, though each bet has an effective cap set by the Kelly forced cash-out (see below).</li>
@@ -26,7 +26,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 </blockquote>
 <h2>The real odds: house edge and RTP</h2>
 <p>Here is the number most sites avoid. Every crash game keeps a house edge, and on Astro it is <strong>3.03%</strong>. That comes from a simple rule in the crash formula: when a specific value lands on a multiple of 33 (mathematically, <code>h % 33 === 0</code>), the round instantly crashes at 1.00x. That happens with a probability of 1 in 33, which is 3.03%.</p>
-<p>In plain terms, for every 1 USDC wagered, the expected return over the long run is about 0.97 USDC. The return to player (RTP) is roughly 96.97%. That edge is what lets the game pay winners and keep running. It is also why no strategy beats the game over time, and any site that tells you otherwise is lying to you.</p>
+<p>In plain terms, for every 1 USDG wagered, the expected return over the long run is about 0.97 USDG. The return to player (RTP) is roughly 96.97%. That edge is what lets the game pay winners and keep running. It is also why no strategy beats the game over time, and any site that tells you otherwise is lying to you.</p>
 <p>The honest comparison looks like this:</p>
 <table>
 <thead>
@@ -64,15 +64,15 @@ border:1px solid #ccc;margin-bottom:18px;">
 <li><strong>Size your bets.</strong> A common rule is to risk no more than 1% to 2% of your bankroll per round. Rounds last seconds, so losses compound fast if you bet big.</li>
 <li><strong>Set limits before you start.</strong> Decide your stop-loss and your walk-away profit in advance. The pace of crash gambling makes it easy to chase losses, which is exactly how sessions go wrong.</li>
 </ul>
-<p>There is one more layer worth understanding. Astro caps how much any single bet can win using a Kelly-style system. Each bet can win up to 2% of the current bankroll as profit, and all bets in a round combined are capped at 2.5%. If your potential profit hits that limit, you are automatically cashed out at the maximum allowed multiplier. The formula is <code>Max Multiplier = (Bankroll x 2% / Bet Amount) + 1</code>. With a 100 USDC bankroll and a 1 USDC bet, your forced cash out lands at 3.00x. This is not the house clipping your wings, it is what guarantees the game can always pay. You can dig into the timing and cash-out mechanics in the <a href="https://astro.fun/en/blog/how-to-play">how to play guide</a>.</p>
+<p>There is one more layer worth understanding. Astro caps how much any single bet can win using a Kelly-style system. Each bet can win up to 2% of the current bankroll as profit, and all bets in a round combined are capped at 2.5%. If your potential profit hits that limit, you are automatically cashed out at the maximum allowed multiplier. The formula is <code>Max Multiplier = (Bankroll x 2% / Bet Amount) + 1</code>. With a 100 USDG bankroll and a 1 USDG bet, your forced cash out lands at 3.00x. This is not the house clipping your wings, it is what guarantees the game can always pay. You can dig into the timing and cash-out mechanics in the <a href="https://astro.fun/en/blog/how-to-play">how to play guide</a>.</p>
 <h2>Can you predict the crash?</h2>
 <p>No. And on a provably fair game, that is the point.</p>
 <p>You will find "crash predictor" apps, bots, and paid signals everywhere. They do not work, and they cannot, because the result of each round is locked in advance by a seed that stays secret until after the round ends. Predicting the crash would mean reversing a keccak256 hash before it is revealed, which is not something an app from an app store can do. What those tools actually do is take your money or your account.</p>
 <p>The only honest edge in crash gambling is understanding the odds and controlling your exits. There is no hidden pattern, because the chain was already written before you placed your bet.</p>
 <h2>Crypto vs fiat crash gambling</h2>
 <p>Most crash games run inside fiat casinos, where you deposit money and trust the operator to settle fairly. Crypto crash games change two things that matter.</p>
-<p>First, verifiability. On an on-chain game, the provably fair anchor and the round results live on a public blockchain, so fairness is checkable rather than promised. Second, custody. You play from your own wallet in USDC, and winnings settle on-chain at the end of each round through the smart contract.</p>
-<p>There is even a third layer. On Astro, the bankroll that backs every bet is open. Anyone can deposit USDC into it (a 2% entry fee applies on deposit), earn a share of every round the house plays, and withdraw at any time, with the whole pool publicly verifiable on-chain. Like any market-making position, it carries risk as well as upside: the bankroll wins when players lose and loses when players win. If you want to be on the other side of the table instead of the player side, you can <a href="https://astro.fun/en/vault">be part of the bankroll</a>.</p>
+<p>First, verifiability. On an on-chain game, the provably fair anchor and the round results live on a public blockchain, so fairness is checkable rather than promised. Second, custody. You play from your own wallet in USDG, and winnings settle on-chain at the end of each round through the smart contract.</p>
+<p>There is even a third layer. On Astro, the bankroll that backs every bet is open. Anyone can deposit USDG into it (a 2% entry fee applies on deposit), earn a share of every round the house plays, and withdraw at any time, with the whole pool publicly verifiable on-chain. Like any market-making position, it carries risk as well as upside: the bankroll wins when players lose and loses when players win. If you want to be on the other side of the table instead of the player side, you can <a href="https://astro.fun/en/vault">be part of the bankroll</a>.</p>
 <p>When people compare crash gambling sites, this is the real dividing line: trust me versus check for yourself.</p>
 <h2>Frequently asked questions</h2>
 <h3>What is crash gambling?</h3>
@@ -92,7 +92,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <h2>Play smart, and verify everything</h2>
 <p>Crash gambling is simple to learn and easy to misjudge. The mechanic is one decision under pressure, the odds are a 3.03% edge (currently set, verifiable on-chain), and the only real protection you have is the ability to check that the game is fair. Astro is built around that last point: no trust required, just math you can verify.</p>
 <p>Set a budget, use auto cash out, and never bet more than you can afford to lose. You must be 18 or older, or the legal age in your jurisdiction, whichever is higher. When you are ready, <a href="https://astro.fun/en/play">play the crash game</a> and verify your first round yourself.</p>
-<p><strong>Disclaimers.</strong> 18+. Play responsibly. astro.fun is a crypto-native game using USDC. Crypto assets are volatile; only play with funds you can afford to lose. This content is informational and does not constitute financial, investment, or legal advice. Availability depends on your local laws. It is your responsibility to know the laws where you live. Gambling involves risk and can be addictive. If playing stops being fun, seek help.</p>
+<p><strong>Disclaimers.</strong> 18+. Play responsibly. astro.fun is a crypto-native game using USDG. Crypto assets are volatile; only play with funds you can afford to lose. This content is informational and does not constitute financial, investment, or legal advice. Availability depends on your local laws. It is your responsibility to know the laws where you live. Gambling involves risk and can be addictive. If playing stops being fun, seek help.</p>
 <!-- JSON-LD FAQPage -->
 
 <pre><code class="language-json">{

@@ -12,7 +12,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <h2>Le déroulement d'une manche de crash gambling, étape par étape</h2>
 <p>Chaque manche suit le même rythme. Sur Astro, ça se passe ainsi :</p>
 <ol>
-<li><strong>Placez votre mise.</strong> Connectez votre portefeuille et définissez votre montant en USDC. Ce qui limite réellement chaque mise individuelle, c'est le plafond dynamique Kelly expliqué dans la section stratégie ci-dessous, pas un plafond fixe.</li>
+<li><strong>Placez votre mise.</strong> Connectez votre portefeuille et définissez votre montant en USDG. Ce qui limite réellement chaque mise individuelle, c'est le plafond dynamique Kelly expliqué dans la section stratégie ci-dessous, pas un plafond fixe.</li>
 <li><strong>Compte à rebours.</strong> La première mise d'une manche déclenche un compte à rebours de 10 secondes. D'autres joueurs rejoignent pendant cette fenêtre.</li>
 <li><strong>Les mises sont closes.</strong> Une fois le compte à rebours terminé, aucune nouvelle mise n'est acceptée pour cette manche.</li>
 <li><strong>Le multiplicateur monte.</strong> Il grimpe depuis 1,00x sans s'arrêter. Il n'y a pas de plafond fixe sur le multiplicateur lui-même, bien que chaque mise ait un plafond effectif défini par le cashout forcé Kelly (voir ci-dessous).</li>
@@ -23,7 +23,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <p><a href="https://astro.fun/fr/play">Découvrir Astro</a></p>
 <h2>Les vraies probabilités : house edge et RTP</h2>
 <p>Voici le chiffre que la plupart des sites évitent. Tout jeu de crash conserve une house edge, et sur Astro elle est de <strong>3,03 %</strong>. Cela découle d'une règle simple dans la formule de crash : lorsqu'une valeur spécifique tombe sur un multiple de 33 (mathématiquement, <code>h % 33 === 0</code>), la manche s'effondre instantanément à 1,00x. Cela arrive avec une probabilité de 1 sur 33, soit 3,03 %.</p>
-<p>En termes simples, pour chaque 1 USDC misé, le retour attendu sur la durée est d'environ 0,97 USDC. Le retour joueur (RTP) est d'environ 96,97 %. Cet avantage est ce qui permet au jeu de payer les gagnants et de continuer à fonctionner. C'est aussi pourquoi aucune stratégie ne bat le jeu sur la durée, et tout site qui vous dit le contraire vous ment.</p>
+<p>En termes simples, pour chaque 1 USDG misé, le retour attendu sur la durée est d'environ 0,97 USDG. Le retour joueur (RTP) est d'environ 96,97 %. Cet avantage est ce qui permet au jeu de payer les gagnants et de continuer à fonctionner. C'est aussi pourquoi aucune stratégie ne bat le jeu sur la durée, et tout site qui vous dit le contraire vous ment.</p>
 <p>La comparaison honnête ressemble à ceci :</p>
 <table>
 <thead>
@@ -61,15 +61,15 @@ border:1px solid #ccc;margin-bottom:18px;">
 <li><strong>Dimensionnez vos mises.</strong> Une règle courante consiste à ne pas risquer plus de 1 % à 2 % de sa bankroll par manche. Les manches durent quelques secondes, donc les pertes s'accumulent vite si vous misez gros.</li>
 <li><strong>Fixez des limites avant de commencer.</strong> Décidez à l'avance de votre stop-loss et de votre profit de sortie. Le rythme du crash gambling rend facile de courir après les pertes, et c'est exactement comme ça que les sessions tournent mal.</li>
 </ul>
-<p>Il y a une autre couche à comprendre. Astro plafonne le gain potentiel de chaque mise grâce à un système de style Kelly. Chaque mise peut rapporter au maximum 2 % de la bankroll actuelle en profit, et toutes les mises d'une manche combinées sont plafonnées à 2,5 %. Si votre profit potentiel atteint cette limite, vous êtes automatiquement encaissé au multiplicateur maximum autorisé. La formule est <code>Max Multiplicateur = (Bankroll × 2 % / Mise) + 1</code>. Avec une bankroll de 100 USDC et une mise de 1 USDC, votre cashout forcé tombe à 3,00x. Ce n'est pas la maison qui rogne vos ailes, c'est ce qui garantit que le jeu peut toujours payer. Vous pouvez approfondir le timing et la mécanique des encaissements dans le <a href="https://astro.fun/fr/blog/how-to-play">guide comment jouer</a>.</p>
+<p>Il y a une autre couche à comprendre. Astro plafonne le gain potentiel de chaque mise grâce à un système de style Kelly. Chaque mise peut rapporter au maximum 2 % de la bankroll actuelle en profit, et toutes les mises d'une manche combinées sont plafonnées à 2,5 %. Si votre profit potentiel atteint cette limite, vous êtes automatiquement encaissé au multiplicateur maximum autorisé. La formule est <code>Max Multiplicateur = (Bankroll × 2 % / Mise) + 1</code>. Avec une bankroll de 100 USDG et une mise de 1 USDG, votre cashout forcé tombe à 3,00x. Ce n'est pas la maison qui rogne vos ailes, c'est ce qui garantit que le jeu peut toujours payer. Vous pouvez approfondir le timing et la mécanique des encaissements dans le <a href="https://astro.fun/fr/blog/how-to-play">guide comment jouer</a>.</p>
 <h2>Peut-on prédire l'effondrement ?</h2>
 <p>Non. Et sur un jeu provably fair, c'est justement le but.</p>
 <p>Vous trouverez des applications de « prédiction de crash », des bots et des signaux payants partout. Ils ne fonctionnent pas, et ne peuvent pas fonctionner, parce que le résultat de chaque manche est verrouillé à l'avance par une graine qui reste secrète jusqu'à la fin de la manche. Prédire l'effondrement reviendrait à inverser un hachage keccak256 avant sa révélation, ce qu'une application téléchargée sur un store ne peut pas faire. Ce que ces outils font réellement, c'est prendre votre argent ou votre compte.</p>
 <p>Le seul avantage honnête dans le crash gambling, c'est de comprendre les probabilités et de contrôler ses sorties. Il n'y a pas de schéma caché, parce que la chaîne était déjà écrite avant que vous placiez votre mise.</p>
 <h2>Crash gambling crypto versus traditionnel</h2>
 <p>La plupart des jeux de crash fonctionnent dans des plateformes traditionnelles, où vous déposez de l'argent et faites confiance à l'opérateur pour régler équitablement. Les jeux de crash crypto changent deux choses importantes.</p>
-<p>Premièrement, la vérifiabilité. Sur un jeu on-chain, l'ancre provably fair et les résultats des manches vivent sur une blockchain publique, donc l'équité est vérifiable plutôt que promise. Deuxièmement, la garde des fonds. Vous jouez depuis votre propre portefeuille en USDC, et les gains se règlent on-chain à la fin de chaque manche via le smart contract.</p>
-<p>Il y a même une troisième couche. Sur Astro, la bankroll qui garantit chaque mise est ouverte. N'importe qui peut y déposer des USDC (des frais d'entrée de 2 % s'appliquent au dépôt), gagner une part de chaque manche jouée par la maison, et retirer à tout moment, l'ensemble du pool étant vérifiable on-chain. Comme toute position de market-making, ça comporte des risques autant que des gains potentiels : la bankroll gagne quand les joueurs perdent et perd quand les joueurs gagnent. Si vous souhaitez être de l'autre côté de la table plutôt que du côté joueur, vous pouvez <a href="https://astro.fun/fr/vault">soutenir la bankroll</a>.</p>
+<p>Premièrement, la vérifiabilité. Sur un jeu on-chain, l'ancre provably fair et les résultats des manches vivent sur une blockchain publique, donc l'équité est vérifiable plutôt que promise. Deuxièmement, la garde des fonds. Vous jouez depuis votre propre portefeuille en USDG, et les gains se règlent on-chain à la fin de chaque manche via le smart contract.</p>
+<p>Il y a même une troisième couche. Sur Astro, la bankroll qui garantit chaque mise est ouverte. N'importe qui peut y déposer des USDG (des frais d'entrée de 2 % s'appliquent au dépôt), gagner une part de chaque manche jouée par la maison, et retirer à tout moment, l'ensemble du pool étant vérifiable on-chain. Comme toute position de market-making, ça comporte des risques autant que des gains potentiels : la bankroll gagne quand les joueurs perdent et perd quand les joueurs gagnent. Si vous souhaitez être de l'autre côté de la table plutôt que du côté joueur, vous pouvez <a href="https://astro.fun/fr/vault">soutenir la bankroll</a>.</p>
 <p>Quand on compare des plateformes de crash gambling, c'est là la vraie ligne de partage : faites-moi confiance versus vérifiez par vous-même.</p>
 <h2>Questions fréquentes</h2>
 <h3>Qu'est-ce que le crash gambling ?</h3>
@@ -79,7 +79,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <h3>Les jeux de crash sont-ils équitables et aléatoires ?</h3>
 <p>Sur un jeu provably fair, oui. Le point d'effondrement est fixé à l'avance par une graine secrète et révélé après la manche, donc il est à la fois imprévisible pour les joueurs et impossible à modifier par la maison une fois la chaîne ancrée.</p>
 <h3>Une stratégie peut-elle garantir une victoire ?</h3>
-<p>Non. Tout jeu de crash a une house edge — 3,03 % sur Astro — donc aucune stratégie ne gagne sur la durée. La stratégie aide à gérer le risque et la bankroll, pas à battre les maths.</p>
+<p>Non. Tout jeu de crash a une house edge (3,03 % sur Astro), donc aucune stratégie ne gagne sur la durée. La stratégie aide à gérer le risque et la bankroll, pas à battre les maths.</p>
 <h3>Le crash gambling relève-t-il de la compétence ou de la chance ?</h3>
 <p>Le point d'effondrement relève de la chance. Votre timing, le dimensionnement de vos mises et votre discipline sont les parties que vous contrôlez, ce qui explique pourquoi la gestion de bankroll compte plus que n'importe quel schéma.</p>
 <h3>Quelle est la house edge sur Astro ?</h3>
@@ -91,7 +91,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <p>Fixez un budget, utilisez l'encaissement automatique, et ne misez jamais plus que ce que vous pouvez vous permettre de perdre. Vous devez avoir 18 ans ou plus, ou l'âge légal dans votre juridiction, selon le plus élevé des deux. Quand vous êtes prêt, <a href="https://astro.fun/fr/play">jouez au jeu de crash</a> et vérifiez votre première manche vous-même.</p>
 <hr />
 <p><em>18+. Jouez de manière responsable.</em></p>
-<p><em>astro.fun est un jeu crypto-natif utilisant l'USDC. Les crypto-actifs sont volatils ; ne jouez qu'avec des fonds que vous pouvez vous permettre de perdre.</em></p>
+<p><em>astro.fun est un jeu crypto-natif utilisant l'USDG. Les crypto-actifs sont volatils ; ne jouez qu'avec des fonds que vous pouvez vous permettre de perdre.</em></p>
 <p><em>Ce contenu est informatif et ne constitue pas un conseil financier, en investissement ou juridique.</em></p>
 <p><em>Le jeu comporte des risques et peut entraîner une dépendance. Si le jeu cesse d'être un plaisir, cherchez de l'aide. Interdit aux mineurs.</em></p>
 </body></html>

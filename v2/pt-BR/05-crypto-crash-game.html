@@ -5,16 +5,16 @@ border:1px solid #ccc;margin-bottom:18px;">
 <h1>Crypto crash game: guia para iniciantes em apostas de multiplicador on-chain</h1>
 <p>Um crypto crash game tem uma regra. Um multiplicador começa em 1,00x e sobe. Você faz cash out antes de ele cair e fica com a aposta multiplicada. Espera demais, ele cai, e a aposta vai embora. As rodadas duram segundos.</p>
 <p>A regra é simples. Confiar no jogo é a parte difícil. Pesquise qualquer termo de crash game crypto e você bate na mesma parede de perguntas: é manipulado, o operador pode decidir quando eu perco, para onde vai meu dinheiro de verdade? Essas são as perguntas certas. A maioria dos sites cripto as responde com um selo que diz "provably fair" e espera que você pare de ler.</p>
-<p>Este guia não faz isso. Explicamos o que é um crypto crash game, como ele difere da versão fiduciária, como carteiras e USDC se encaixam, e como você pode verificar qualquer rodada por conta própria em vez de confiar na palavra de alguém. Se quiser acompanhar uma rodada enquanto lê, <a href="https://astro.fun/pt/play">veja como o jogo funciona</a>.</p>
+<p>Este guia não faz isso. Explicamos o que é um crypto crash game, como ele difere da versão fiduciária, como carteiras e USDG se encaixam, e como você pode verificar qualquer rodada por conta própria em vez de confiar na palavra de alguém. Se quiser acompanhar uma rodada enquanto lê, <a href="https://astro.fun/pt/play">veja como o jogo funciona</a>.</p>
 <h2>O que é um crypto crash game?</h2>
 <p>Um crypto crash game é um jogo de multiplicador rápido jogado com criptomoeda. Você faz uma aposta, um número sobe de 1,00x e você faz cash out antes de ele cair num ponto aleatório. Cash out em 2,00x, você dobra. Cash out em 10x, ganha dez vezes o valor apostado. Perde o crash, perde a aposta.</p>
-<p>Essa parte é igual a qualquer crash game. A palavra "crypto" muda duas coisas por baixo. Você aposta com sua própria carteira em vez de um saldo de plataforma, e os resultados liquidam numa blockchain em vez de num banco de dados privado. No Astro, isso significa que o jogo inteiro roda on-chain numa rede EVM, com apostas feitas em USDC.</p>
+<p>Essa parte é igual a qualquer crash game. A palavra "crypto" muda duas coisas por baixo. Você aposta com sua própria carteira em vez de um saldo de plataforma, e os resultados liquidam numa blockchain em vez de num banco de dados privado. No Astro, isso significa que o jogo inteiro roda on-chain numa rede EVM, com apostas feitas em USDG.</p>
 <p>O formato em si não é novo. O Bustabit lançou o crash game original em 2014, e o Aviator da Spribe o popularizou em 2019. O que é novo é mover a camada de confiança das mãos do operador para um registro público. Esse é o argumento central de um crash game on-chain.</p>
 <h2>Crypto crash game vs crash game fiduciário: a diferença real</h2>
 <p>A maioria dos crash games fica dentro de plataformas fiduciárias. Você deposita, joga e confia no operador para liquidar cada rodada com honestidade. A justiça é afirmada, não mostrada. Se quiser checar, não consegue.</p>
 <p>Um crypto crash game on-chain muda as duas coisas que realmente importam.</p>
 <p>Primeiro, a verificabilidade. Os dados que provam que o jogo é justo ficam numa blockchain pública, então qualquer pessoa pode verificar. A justiça passa a ser algo que você confirma, não algo que te contam.</p>
-<p>Segundo, a custódia. Você joga com sua própria carteira em USDC. Os ganhos liquidam on-chain por um contrato inteligente ao final de cada rodada, contra um resultado que a plataforma se comprometeu com antecedência.</p>
+<p>Segundo, a custódia. Você joga com sua própria carteira em USDG. Os ganhos liquidam on-chain por um contrato inteligente ao final de cada rodada, contra um resultado que a plataforma se comprometeu com antecedência.</p>
 <table>
 <thead>
 <tr>
@@ -27,7 +27,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <tr>
 <td>De onde você joga</td>
 <td>Saldo da plataforma</td>
-<td>Sua própria carteira (USDC)</td>
+<td>Sua própria carteira (USDG)</td>
 </tr>
 <tr>
 <td>Quem liquida a rodada</td>
@@ -47,13 +47,13 @@ border:1px solid #ccc;margin-bottom:18px;">
 </tbody>
 </table>
 <p>Quando as pessoas comparam crash games, essa é a linha divisória real. Confie em mim versus verifique você mesmo.</p>
-<h2>Carteiras, USDC e como o dinheiro circula</h2>
-<p>Se você é novo em cripto, esta é a parte que parece intimidante e não é. Você precisa de uma carteira cripto e de algum USDC, a stablecoin atrelada ao dólar. Um USDC é projetado para valer um dólar americano, então você não está apostando na oscilação de preço de uma moeda enquanto joga.</p>
-<p>No Astro, o fluxo é simples. Você conecta sua carteira, define sua aposta em USDC e joga. O que limita qualquer aposta individual não é um teto fixo, mas um limite dinâmico de Kelly: o sistema faz o cash out automaticamente quando seu lucro potencial atinge 2 % do bankroll. Quando você faz cash out, o servidor registra instantaneamente, porque esperar por uma confirmação na blockchain no meio da rodada seria lento demais. Depois, o contrato inteligente liquida tudo on-chain ao final da rodada, verificando cada cash out contra o ponto de crash real.</p>
+<h2>Carteiras, USDG e como o dinheiro circula</h2>
+<p>Se você é novo em cripto, esta é a parte que parece intimidante e não é. Você precisa de uma carteira cripto e de algum USDG (Global Dollar), uma stablecoin atrelada ao dólar emitida pela Paxos, um emissor regulado. Um USDG é projetado para valer um dólar americano, então você não está apostando na oscilação de preço de uma moeda enquanto joga.</p>
+<p>No Astro, o fluxo é simples. Você conecta sua carteira, define sua aposta em USDG e joga. O que limita qualquer aposta individual não é um teto fixo, mas um limite dinâmico de Kelly: o sistema faz o cash out automaticamente quando seu lucro potencial atinge 2 % do bankroll. Quando você faz cash out, o servidor registra instantaneamente, porque esperar por uma confirmação na blockchain no meio da rodada seria lento demais. Depois, o contrato inteligente liquida tudo on-chain ao final da rodada, verificando cada cash out contra o ponto de crash real.</p>
 <p>O saque funciona num modelo de "pull payment", que é um padrão de segurança, não um obstáculo. Seu saldo fica no contrato inteligente, e você pressiona Resgatar para puxar seus fundos para a carteira quando quiser. Você nunca está pedindo a um operador que "aprove" um pagamento. O contrato já deve a você.</p>
 <h2>As chances reais: house edge e RTP</h2>
 <p>Aqui está o número que a maioria dos sites enterra. Todo crash game mantém um house edge, e no Astro ele é de <strong>3,03 %</strong>. Vem de uma regra na fórmula de crash. Quando um valor específico cai em um múltiplo de 33 (matematicamente, <code>h % 33 === 0</code>), a rodada cai instantaneamente em 1,00x. Isso acontece com probabilidade de 1 em 33, o que dá 3,03 %.</p>
-<p>Em termos simples: para cada 1 USDC apostado, o retorno esperado no longo prazo é de cerca de 0,97 USDC. O RTP fica em aproximadamente 96,97 %. Esse edge é o que financia os pagamentos e mantém o jogo funcionando. Também é o motivo pelo qual nenhuma estratégia bate o jogo no longo prazo. Qualquer site que prometa o contrário está te vendendo algo.</p>
+<p>Em termos simples: para cada 1 USDG apostado, o retorno esperado no longo prazo é de cerca de 0,97 USDG. O RTP fica em aproximadamente 96,97 %. Esse edge é o que financia os pagamentos e mantém o jogo funcionando. Também é o motivo pelo qual nenhuma estratégia bate o jogo no longo prazo. Qualquer site que prometa o contrário está te vendendo algo.</p>
 <table>
 <thead>
 <tr>
@@ -87,7 +87,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <h2>Como começar com segurança</h2>
 <p>Começar leva alguns minutos. Fazer isso com bom senso exige algumas regras.</p>
 <ol>
-<li><strong>Obtenha uma carteira e algum USDC.</strong> Financie uma carteira cripto com USDC numa rede EVM suportada. Use apenas dinheiro que você aceita perder.</li>
+<li><strong>Obtenha uma carteira e algum USDG.</strong> Financie uma carteira cripto com USDG numa rede EVM suportada. Use apenas dinheiro que você aceita perder.</li>
 <li><strong>Conecte e defina um orçamento.</strong> Conecte sua carteira ao Astro e decida seu orçamento para a sessão antes de fazer uma única aposta.</li>
 <li><strong>Use cash out automático no início.</strong> Definir um alvo remove o pânico. Novos jogadores costumam ficar em 1,5x a 2x para ganhos pequenos frequentes.</li>
 <li><strong>Aposte pouco.</strong> Uma regra comum é arriscar não mais de 1 % a 2 % do seu bankroll por rodada. As rodadas são rápidas, então as perdas se acumulam depressa.</li>
@@ -95,15 +95,15 @@ border:1px solid #ccc;margin-bottom:18px;">
 </ol>
 <p>Um lembrete honesto. Isso é apostas, com um edge real de 3,03 % e uma chance real de perder o valor apostado. Defina limites, nunca persiga perdas e trate como entretenimento com orçamento fixo, não como renda.</p>
 <h2>Quer ser a casa? O Vault</h2>
-<p>A maioria dos jogadores fica sempre do lado do jogador. No Astro, você não precisa. O bankroll que sustenta cada aposta é aberto. Você pode depositar USDC nele (taxa de entrada de 2 % aplicada no depósito), ganhar uma parcela de cada rodada que a casa joga e sacar a qualquer momento, com todo o pool publicamente verificável on-chain. Como qualquer posição de formação de mercado, carrega risco além do potencial de ganho: o bankroll ganha quando os jogadores perdem e perde quando os jogadores ganham.</p>
+<p>A maioria dos jogadores fica sempre do lado do jogador. No Astro, você não precisa. O bankroll que sustenta cada aposta é aberto. Você pode depositar USDG nele (taxa de entrada de 2 % aplicada no depósito), ganhar uma parcela de cada rodada que a casa joga e sacar a qualquer momento, com todo o pool publicamente verificável on-chain. Como qualquer posição de formação de mercado, carrega risco além do potencial de ganho: o bankroll ganha quando os jogadores perdem e perde quando os jogadores ganham.</p>
 <p>É a mesma transparência virada do avesso. Em vez de apostar contra a casa, você passa a fazer parte dela, e pode auditar o bankroll da mesma forma que audita uma rodada. Se esse é o lado que você quer, você pode <a href="https://astro.fun/pt/vault">participar do bankroll</a>.</p>
 <h2>Perguntas frequentes</h2>
 <h3>O que é um crypto crash game?</h3>
-<p>Um crypto crash game é um jogo de multiplicador jogado com criptomoeda, onde você aposta, observa um número subir de 1,00x e faz cash out antes de ele cair num ponto aleatório. Num jogo on-chain como o Astro, as apostas são feitas em USDC com sua própria carteira e as rodadas liquidam numa blockchain pública.</p>
+<p>Um crypto crash game é um jogo de multiplicador jogado com criptomoeda, onde você aposta, observa um número subir de 1,00x e faz cash out antes de ele cair num ponto aleatório. Num jogo on-chain como o Astro, as apostas são feitas em USDG com sua própria carteira e as rodadas liquidam numa blockchain pública.</p>
 <h3>Como um crypto crash game difere de um crash game fiduciário?</h3>
 <p>Um crash game fiduciário roda dentro do sistema privado de uma plataforma, então você confia no operador para liquidar de forma justa. Um crypto crash game on-chain permite jogar com sua própria carteira e liquida os resultados numa blockchain pública, então a justiça é verificável, não apenas afirmada.</p>
 <h3>Preciso de uma carteira cripto para jogar?</h3>
-<p>Sim. Você conecta uma carteira cripto e aposta em USDC, uma stablecoin atrelada ao dólar. Os ganhos liquidam on-chain ao final de cada rodada, e você saca pressionando Resgatar para puxar os fundos de volta à carteira.</p>
+<p>Sim. Você conecta uma carteira cripto e aposta em USDG, uma stablecoin atrelada ao dólar. Os ganhos liquidam on-chain ao final de cada rodada, e você saca pressionando Resgatar para puxar os fundos de volta à carteira.</p>
 <h3>Os crypto crash games são justos?</h3>
 <p>Num jogo provably fair, sim. O Astro publica uma âncora criptográfica on-chain antes de qualquer aposta, usando uma hash chain keccak256, depois revela a seed de cada rodada para que qualquer pessoa confirme que o resultado não foi alterado. O risco vem de sites não verificáveis e de ferramentas falsas de predição, não do formato.</p>
 <h3>Qual é o house edge no Astro?</h3>
@@ -116,7 +116,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <p>Um crypto crash game é simples de aprender e fácil de subestimar. O loop é uma decisão sob pressão, as chances são um edge de 3,03 % (atualmente definido, verificável on-chain), e a proteção real que você tem é a capacidade de confirmar que o jogo é justo. O Astro é construído em torno desse ponto. Sem necessidade de confiança, só matemática que você pode verificar.</p>
 <p>Obtenha uma carteira, defina um orçamento, use cash out automático e nunca aposte mais do que pode perder. Quando estiver pronto, <a href="https://astro.fun/pt/play">veja como o jogo funciona</a> e verifique sua primeira rodada por conta própria.</p>
 <hr />
-<p><em>18+. Jogue com responsabilidade. astro.fun é um jogo cripto-nativo que usa USDC. Criptoativos são voláteis; jogue apenas com recursos que você pode perder. Este conteúdo é informativo e não constitui aconselhamento financeiro, de investimento ou jurídico. Proibido para menores de 18 anos. Apostar pode causar dependência. Em caso de problemas com jogo, procure ajuda.</em></p>
+<p><em>18+. Jogue com responsabilidade. astro.fun é um jogo cripto-nativo que usa USDG. Criptoativos são voláteis; jogue apenas com recursos que você pode perder. Este conteúdo é informativo e não constitui aconselhamento financeiro, de investimento ou jurídico. Proibido para menores de 18 anos. Apostar pode causar dependência. Em caso de problemas com jogo, procure ajuda.</em></p>
 <!-- JSON-LD FAQPage -->
 
 <pre><code class="language-json">{
@@ -128,7 +128,7 @@ border:1px solid #ccc;margin-bottom:18px;">
       &quot;name&quot;: &quot;O que é um crypto crash game?&quot;,
       &quot;acceptedAnswer&quot;: {
         &quot;@type&quot;: &quot;Answer&quot;,
-        &quot;text&quot;: &quot;Um crypto crash game é um jogo de multiplicador jogado com criptomoeda, onde você aposta, observa um número subir de 1,00x e faz cash out antes de ele cair num ponto aleatório. Num jogo on-chain como o Astro, as apostas são feitas em USDC com sua própria carteira e as rodadas liquidam numa blockchain pública.&quot;
+        &quot;text&quot;: &quot;Um crypto crash game é um jogo de multiplicador jogado com criptomoeda, onde você aposta, observa um número subir de 1,00x e faz cash out antes de ele cair num ponto aleatório. Num jogo on-chain como o Astro, as apostas são feitas em USDG com sua própria carteira e as rodadas liquidam numa blockchain pública.&quot;
       }
     },
     {
@@ -144,7 +144,7 @@ border:1px solid #ccc;margin-bottom:18px;">
       &quot;name&quot;: &quot;Preciso de uma carteira cripto para jogar um crypto crash game?&quot;,
       &quot;acceptedAnswer&quot;: {
         &quot;@type&quot;: &quot;Answer&quot;,
-        &quot;text&quot;: &quot;Sim. Você conecta uma carteira cripto e aposta em USDC, uma stablecoin atrelada ao dólar. Os ganhos liquidam on-chain ao final de cada rodada, e você saca pressionando Resgatar.&quot;
+        &quot;text&quot;: &quot;Sim. Você conecta uma carteira cripto e aposta em USDG, uma stablecoin atrelada ao dólar. Os ganhos liquidam on-chain ao final de cada rodada, e você saca pressionando Resgatar.&quot;
       }
     },
     {

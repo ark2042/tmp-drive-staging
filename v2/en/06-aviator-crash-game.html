@@ -48,7 +48,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <tr>
 <td>Where you play</td>
 <td>A third-party casino account</td>
-<td>Your own wallet, in USDC</td>
+<td>Your own wallet, in USDG</td>
 </tr>
 <tr>
 <td>Fairness model</td>
@@ -73,7 +73,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 </tbody>
 </table>
 <p>Three things change when the game runs on-chain.</p>
-<p><strong>Custody.</strong> On Aviator you deposit into a casino and trust it to hold and pay out your balance. On Astro you play from your own wallet, your stakes are in USDC, and winnings settle on-chain at the end of each round through the smart contract. What limits any single bet is not a flat ceiling but a dynamic Kelly cap: each bet can win up to 2% of the bankroll as profit before an automatic cash-out.</p>
+<p><strong>Custody.</strong> On Aviator you deposit into a casino and trust it to hold and pay out your balance. On Astro you play from your own wallet, your stakes are in USDG, and winnings settle on-chain at the end of each round through the smart contract. What limits any single bet is not a flat ceiling but a dynamic Kelly cap: each bet can win up to 2% of the bankroll as profit before an automatic cash-out.</p>
 <p><strong>Verifiable fairness.</strong> A per-round seed check is good. A pre-committed chain is stronger. Astro pre-generates a chain of secret seeds where each seed is the keccak256 hash of the next, then publishes the final hash on the blockchain as a public anchor before anyone bets. That single value commits the platform to every future result in advance. Changing one seed would break the whole chain, in public. You do not have to take our word for any of it, you can <a href="https://astro.fun/en/blog/provably-fair">verify any round yourself</a>.</p>
 <p><strong>An edge you can read.</strong> Astro's house edge is currently set at 3.03%, configurable on-chain by the operator but never hidden. It comes from an instant crash that lands whenever a value hits a multiple of 33, written in the code as <code>h % 33 === 0</code>, which happens 1 in 33 times. That puts the RTP at roughly 96.97%, and it is posted, not promised. There is even a side most casinos never offer: the bankroll that backs every bet is open, so you can <a href="https://astro.fun/en/vault">be part of the bankroll</a> (a 2% entry fee applies on deposit), earn a share of every round it plays, and withdraw at any time. Like any market-making position, it carries risk as well as upside: the bankroll wins when players lose and loses when players win.</p>
 <p>None of this makes the house edge disappear. Both games keep one, and over the long run neither can be beaten. The difference is whether you are told the odds or shown them.</p>
@@ -90,14 +90,14 @@ border:1px solid #ccc;margin-bottom:18px;">
 <h3>What is the Aviator RTP and house edge?</h3>
 <p>Spribe lists Aviator's RTP at 97%, which implies a house edge of about 3%, though reviewers note the effective figure can vary by operator. By comparison, Astro runs a 3.03% edge (currently set) with an RTP near 96.97%, derived from a 1 in 33 instant crash and verifiable on-chain.</p>
 <h3>How is Aviator different from a crypto crash game like Astro?</h3>
-<p>The gameplay is nearly identical. The difference is custody and verifiability. Aviator runs inside a third-party casino that holds your balance and declares the odds. An on-chain crash like Astro is played from your own wallet in USDC, settles on-chain, and pre-commits every result through a public hash chain you can check yourself.</p>
+<p>The gameplay is nearly identical. The difference is custody and verifiability. Aviator runs inside a third-party casino that holds your balance and declares the odds. An on-chain crash like Astro is played from your own wallet in USDG, settles on-chain, and pre-commits every result through a public hash chain you can check yourself.</p>
 <h3>Can you win at Aviator?</h3>
 <p>You can win individual rounds, and disciplined bankroll management and auto cashout help you control risk. You cannot beat the house edge over the long run on any crash game, and anyone selling a guaranteed system or a predictor is lying. Treat it as entertainment with a fixed budget.</p>
 <h2>Play smart, and verify everything</h2>
 <p>Aviator earned its reach. It is simple, social, and runs anywhere, and it taught a generation of players what a crash game feels like. The open question it leaves is the one this whole category turns on: can you check the math, or are you asked to trust the brand holding your money?</p>
 <p>That is the gap an on-chain crash is built to close. Same one-decision loop, but played from your wallet, settled on-chain, with a 3.03% edge (currently set, verifiable on-chain) and a fairness chain anyone can audit. No trust required, just math you can read.</p>
 <p>Whatever you play, set a budget, use auto cashout, and never bet more than you can afford to lose. You must be 18 or older, or the legal age in your jurisdiction, whichever is higher. When you are ready, <a href="https://astro.fun/en/play">Play Now</a> and <a href="https://astro.fun/en/blog/provably-fair">verify your first round yourself</a>.</p>
-<p><strong>Disclaimers.</strong> 18+. Play responsibly. astro.fun is a crypto-native game using USDC. Crypto assets are volatile; only play with funds you can afford to lose. This content is informational and does not constitute financial, investment, or legal advice. Availability depends on your local laws. It is your responsibility to know the laws where you live. Gambling involves risk and can be addictive. If playing stops being fun, seek help.</p>
+<p><strong>Disclaimers.</strong> 18+. Play responsibly. astro.fun is a crypto-native game using USDG. Crypto assets are volatile; only play with funds you can afford to lose. This content is informational and does not constitute financial, investment, or legal advice. Availability depends on your local laws. It is your responsibility to know the laws where you live. Gambling involves risk and can be addictive. If playing stops being fun, seek help.</p>
 <!-- JSON-LD FAQPage -->
 
 <pre><code class="language-json">{
@@ -149,7 +149,7 @@ border:1px solid #ccc;margin-bottom:18px;">
       &quot;name&quot;: &quot;How is Aviator different from a crypto crash game like Astro?&quot;,
       &quot;acceptedAnswer&quot;: {
         &quot;@type&quot;: &quot;Answer&quot;,
-        &quot;text&quot;: &quot;The gameplay is nearly identical. The difference is custody and verifiability. Aviator runs inside a third-party casino that holds your balance and declares the odds. An on-chain crash like Astro is played from your own wallet in USDC, settles on-chain, and pre-commits every result through a public hash chain you can check yourself.&quot;
+        &quot;text&quot;: &quot;The gameplay is nearly identical. The difference is custody and verifiability. Aviator runs inside a third-party casino that holds your balance and declares the odds. An on-chain crash like Astro is played from your own wallet in USDG, settles on-chain, and pre-commits every result through a public hash chain you can check yourself.&quot;
       }
     },
     {

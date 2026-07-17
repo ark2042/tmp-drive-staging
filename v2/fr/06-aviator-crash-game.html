@@ -18,7 +18,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <li><strong>Retirez, ou crashez.</strong> Appuyez sur retrait pour bloquer votre mise multipliée par le chiffre en cours. Attendez trop longtemps et l'avion s'envole, emportant toutes les mises encore en jeu.</li>
 <li><strong>Fin de manche.</strong> Les résultats s'affichent à l'écran, et la manche suivante s'ouvre.</li>
 </ol>
-<p>Vous pouvez jouer manuellement — cliquer sur le retrait à la dernière seconde de tension — ou définir une cible de retrait automatique et laisser le jeu en sortir pour vous. La mise automatique répète votre pari manche après manche. Rien de tout cela n'est propre à Aviator aujourd'hui, mais c'est là que beaucoup de joueurs l'ont découvert en premier. La décision fondamentale est la même sur tout jeu de crash, notamment <a href="https://astro.fun/fr/blog/how-to-play">comment se déroule une manche</a> sur Astro.</p>
+<p>Vous pouvez jouer manuellement, en cliquant sur le retrait à la dernière seconde de tension, ou définir une cible de retrait automatique et laisser le jeu en sortir pour vous. La mise automatique répète votre pari manche après manche. Rien de tout cela n'est propre à Aviator aujourd'hui, mais c'est là que beaucoup de joueurs l'ont découvert en premier. La décision fondamentale est la même sur tout jeu de crash, notamment <a href="https://astro.fun/fr/blog/how-to-play">comment se déroule une manche</a> sur Astro.</p>
 <p><a href="https://astro.fun/fr/play">Voir une manche en direct</a></p>
 <h2>Pourquoi Aviator est devenu viral</h2>
 <p>Aviator a explosé pour des raisons qui n'ont pas grand-chose à voir avec l'avion.</p>
@@ -45,7 +45,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <tr>
 <td>Où vous jouez</td>
 <td>Un compte de plateforme tierce</td>
-<td>Votre propre wallet, en USDC</td>
+<td>Votre propre wallet, en USDG</td>
 </tr>
 <tr>
 <td>Modèle d'équité</td>
@@ -70,7 +70,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 </tbody>
 </table>
 <p>Trois choses changent quand le jeu tourne on-chain.</p>
-<p><strong>La garde des fonds.</strong> Sur Aviator, vous déposez dans une plateforme et lui faites confiance pour détenir et verser votre solde. Sur Astro, vous jouez depuis votre propre wallet, vos mises sont en USDC, et les gains se règlent on-chain à la fin de chaque manche via le smart contract. Ce qui limite une mise individuelle n'est pas un plafond fixe, mais un plafond Kelly dynamique : chaque mise peut gagner jusqu'à 2 % de la bankroll en profit avant un retrait automatique forcé.</p>
+<p><strong>La garde des fonds.</strong> Sur Aviator, vous déposez dans une plateforme et lui faites confiance pour détenir et verser votre solde. Sur Astro, vous jouez depuis votre propre wallet, vos mises sont en USDG, et les gains se règlent on-chain à la fin de chaque manche via le smart contract. Ce qui limite une mise individuelle n'est pas un plafond fixe, mais un plafond Kelly dynamique : chaque mise peut gagner jusqu'à 2 % de la bankroll en profit avant un retrait automatique forcé.</p>
 <p><strong>Une équité vérifiable.</strong> Une vérification de seed par manche, c'est bien. Une chaîne pré-engagée, c'est plus solide. Astro pré-génère une chaîne de seeds secrets où chaque seed est le hash keccak256 du suivant, puis publie le hash final sur la blockchain comme ancre publique avant que quiconque mise. Cette valeur unique engage la plateforme sur chaque résultat futur à l'avance. Modifier un seed casse toute la chaîne, en public. Vous n'avez pas besoin de nous croire sur parole : vous pouvez <a href="https://astro.fun/fr/blog/provably-fair">vérifier n'importe quelle manche vous-même</a>.</p>
 <p><strong>Un avantage lisible.</strong> La house edge d'Astro est actuellement fixée à 3,03 %, configurable on-chain par l'opérateur mais jamais cachée. Elle découle d'un crash instantané qui se produit chaque fois qu'une valeur tombe sur un multiple de 33, écrit dans le code sous la forme <code>h % 33 === 0</code>, ce qui arrive 1 fois sur 33. Le RTP est donc d'environ 96,97 %, et c'est publié, pas promis. Il existe même un côté que la plupart des plateformes de jeu n'offrent jamais : la bankroll qui garantit chaque mise est ouverte, donc vous pouvez <a href="https://astro.fun/fr/vault">rejoindre la bankroll</a> (des frais d'entrée de 2 % s'appliquent au dépôt), percevoir une part de chaque manche jouée et retirer à tout moment. Comme toute position de tenue de marché, cela comporte des risques autant qu'un potentiel de gain : la bankroll gagne quand les joueurs perdent et perd quand les joueurs gagnent.</p>
 <p>Rien de tout cela ne fait disparaître la house edge. Les deux jeux en conservent une, et sur la durée, aucun des deux ne peut être battu. La différence, c'est si on vous dit les cotes ou si on vous les montre.</p>
@@ -87,7 +87,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <h3>Quel est le RTP et la house edge d'Aviator ?</h3>
 <p>Spribe annonce un RTP d'Aviator à 97 %, ce qui implique une house edge d'environ 3 %, bien que des analyses indépendantes notent que le chiffre effectif peut varier selon l'opérateur. Par comparaison, Astro applique une house edge de 3,03 % (valeur actuelle) avec un RTP proche de 96,97 %, découlant d'un crash instantané 1 fois sur 33 et vérifiable on-chain.</p>
 <h3>En quoi Aviator diffère-t-il d'un crypto crash game comme Astro ?</h3>
-<p>Le gameplay est presque identique. La différence tient à la garde des fonds et à la vérifiabilité. Aviator tourne dans une plateforme tierce qui détient votre solde et déclare les cotes. Un crash on-chain comme Astro se joue depuis votre propre wallet en USDC, se règle on-chain et pré-engage chaque résultat via une chaîne de hachage publique que vous pouvez vérifier vous-même.</p>
+<p>Le gameplay est presque identique. La différence tient à la garde des fonds et à la vérifiabilité. Aviator tourne dans une plateforme tierce qui détient votre solde et déclare les cotes. Un crash on-chain comme Astro se joue depuis votre propre wallet en USDG, se règle on-chain et pré-engage chaque résultat via une chaîne de hachage publique que vous pouvez vérifier vous-même.</p>
 <h3>Peut-on gagner à Aviator ?</h3>
 <p>Vous pouvez gagner des manches individuelles, et une gestion rigoureuse de votre bankroll ainsi que le retrait automatique vous aident à contrôler le risque. Vous ne pouvez pas battre la house edge sur la durée, sur aucun jeu de crash. Toute personne qui vend un système garanti ou un prédicteur ment. Traitez-le comme un divertissement avec un budget fixe.</p>
 <h2>Jouez intelligemment, et vérifiez tout</h2>
@@ -96,7 +96,7 @@ border:1px solid #ccc;margin-bottom:18px;">
 <p>Quel que soit le jeu choisi, définissez un budget, utilisez le retrait automatique, et ne misez jamais plus que ce que vous pouvez vous permettre de perdre. Vous devez avoir 18 ans ou plus, ou l'âge légal dans votre juridiction, selon le plus élevé. Quand vous êtes prêt, <a href="https://astro.fun/fr/play">commencez à jouer</a> et <a href="https://astro.fun/fr/blog/provably-fair">vérifiez votre première manche vous-même</a>.</p>
 <hr />
 <p><em>18+. Jouez de manière responsable.</em></p>
-<p><em>astro.fun est un jeu crypto-natif utilisant l'USDC. Les crypto-actifs sont volatils ; ne jouez qu'avec des fonds que vous pouvez vous permettre de perdre.</em></p>
+<p><em>astro.fun est un jeu crypto-natif utilisant l'USDG. Les crypto-actifs sont volatils ; ne jouez qu'avec des fonds que vous pouvez vous permettre de perdre.</em></p>
 <p><em>Ce contenu est informatif et ne constitue pas un conseil financier, en investissement ou juridique.</em></p>
 <p><em>Le jeu comporte des risques et peut entraîner une dépendance. Si le jeu cesse d'être un plaisir, cherchez de l'aide. Interdit aux mineurs.</em></p>
 <p>[Keep JSON-LD verbatim]</p>
